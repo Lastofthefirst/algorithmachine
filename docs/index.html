@@ -151,13 +151,11 @@ input:active{
             
             <div class="title sliding">AlgorithMachine</div>
               <div class="right">
-            <div class="link icon-only" >
               
                 <a class="ac-6" href="#">
-                  <i class="icon f7-icons ios-only" style="color:lavender;">layers</i>
-                  <i class="icon material-icons md-only" style="color:lavender;">layers</i>
+                  <i class="icon link icon-only f7-icons ios-only" style="color:lavender; margin-right: 15px;">layers</i>
+                  <i class="icon material-icons md-only" style="color:lavender; margin-right: 15px;">layers</i>
                 </a>
-              </div>
               </div>
           </div>
         </div>
@@ -233,8 +231,8 @@ input:active{
                           }
                           return posIntegers.reduce( (a,b) => a * b );
                           };</p>
-                      <p id="thePig">Factorialize a number:</p>
-                      <div>Stick with a smaller number:<input id="firstNum" type="number" onkeyup="setTimeout(convertMe(factorialize,'firstNum','secondNum'), 1000)"></div>
+                      <p id="thePig">Multiplies a number by each number that preceeds it:</p>
+                      <div>Start with a smaller number:<input id="firstNum" type="number" onkeyup="setTimeout(convertMe(factorialize,'firstNum','secondNum'), 1000)"></div>
                     </div>
                     <div class="card-footer"><div>Output<p id="secondNum"></p></div></div>
                   </div>
