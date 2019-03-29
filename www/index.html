@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!--
+  Customize this policy to fit your own app's needs. For more guidance, see:
+      https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+  Some notes:
+      * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+      * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+      * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+          * Enable inline JS: add 'unsafe-inline' to default-src
+  -->
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#2196f3">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <title>AlgorithMachine</title>
+
+  <link rel="stylesheet" href="framework7/css/framework7.bundle.min.css">
+  <link rel="stylesheet" href="css/icons.css">
+  <link rel="stylesheet" href="css/app.css">
+  <style>
+  .demo-card-header-pic .card-header {
+  height: 40vw;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  }
+  .card-footer{
+    background-color: #f3e8c9;
+  }
+  .card-content{
+    background-color: #f4f5fc;
+    color:rgb(12, 61, 136);
+  }
+  .demo-card-header-pic .card-content-padding .date{
+  color: #8e8e93;
+
+}
+.navbar{
+  background-color:#6579d3; 
+  color:#f9f2d7;
+}
+.page-content{
+  background-color:#c8cff1;
+}
+li{
+  background-color:#6a83f1;
+}
+.contents-list-imgs{
+  object-fit: cover;
+  width:80px;
+  height:80px;
+}
+input:hover{
+  background-color: white;
+}
+  </style>
+</head>
+<body>
+  <div id="app">
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar"></div>
+    <!-- Left panel with cover effect-->
+    <div class="panel panel-left panel-cover theme-dark">
+      <div class="view">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="title">Table of Contents</div>
+            </div>
+          </div>
+          <div class="page-content">
+              <div class="list media-list">
+                  <ul>
+                    <li>
+                      <a href="#" class="item-link item-content">
+                        <div class="item-media"><img class="contents-list-imgs" src="https://images.unsplash.com/photo-1483664852095-d6cc6870702d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" width="80"/></div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class="item-title">Temperature</div>
+                          </div>
+                          <div class="item-subtitle">Celcius Converter</div>
+                          <div class="item-text">Celcius to Fahrenheit</div>
+                        </div></a></li>
+                    <li>
+                      <a href="#" class="item-link item-content">
+                        <div class="item-media"><img class="contents-list-imgs" src="https://images.unsplash.com/photo-1536250136195-1772ab2d3786?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1532&q=80" width="80"/></div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class="item-title">Reverser</div>
+                          </div>
+                          <div class="item-subtitle">String Reverser</div>
+                          <div class="item-text">Returns a word or sentence backwards.</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="item-link item-content">
+                        <div class="item-media"><img class="contents-list-imgs" src="https://images.unsplash.com/photo-1533226458520-6f71cffeaa6a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1275&q=80" /></div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class="item-title">Alphabet</div>
+                          </div>
+                          <div class="item-subtitle">Missing Letter</div>
+                          <div class="item-text">Finds the missing letter in a series.</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                        <a href="#" class="item-link item-content">
+                          <div class="item-media"><img class="contents-list-imgs" src="https://images.unsplash.com/photo-1537033206914-9d3551ff8103?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" width="80"/></div>
+                          <div class="item-inner">
+                            <div class="item-title-row">
+                              <div class="item-title">Translator</div>
+                            </div>
+                            <div class="item-subtitle">Pig Latin</div>
+                            <div class="item-text">Translates to Pig Latin!</div>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                          <a href="#" class="item-link item-content">
+                            <div class="item-media"><img class="contents-list-imgs" src="https://images.unsplash.com/photo-1513957723230-c330c6152342?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" width="80"/></div>
+                            <div class="item-inner">
+                              <div class="item-title-row">
+                                <div class="item-title">Capitalizer</div>
+                              </div>
+                              <div class="item-subtitle">To Uppercase</div>
+                              <div class="item-text">First letter in each word capitalized.</div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                            <a href="#" class="item-link item-content">
+                              <div class="item-media"><img class="contents-list-imgs" src="https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" width="80"/></div>
+                              <div class="item-inner">
+                                <div class="item-title-row">
+                                  <div class="item-title">Factorialize</div>
+                                </div>
+                                <div class="item-subtitle">Missing Letter</div>
+                                <div class="item-text">Multiplies by each integer</div>
+                              </div>
+                            </a>
+                          </li>
+                          <li>
+                              <a href="#" class="item-link item-content">
+                                <div class="item-media"><img class="contents-list-imgs" src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" width="80"/></div>
+                                <div class="item-inner">
+                                  <div class="item-title-row">
+                                    <div class="item-title">DNA</div>
+                                  </div>
+                                  <div class="item-subtitle">Matches Pairs</div>
+                                  <div class="item-text">Lists the corresponding DNA pair</div>
+                                </div>
+                              </a>
+                            </li>
+                  </ul>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Right panel with reveal effect-->
+    <div class="panel panel-right panel-reveal theme-dark" >
+      <div class="view">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="title">Information</div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="list">
+                <ul>
+              <li>
+                <a href="https://en.wikipedia.org/wiki/Algorithm" target="_blank" rel="noopener noreferrer"  class="item-link item-content external">
+                  <div class="item-media"><img src="imgs/WikipediaIcon.png" style="width: 32px;"></div>
+                  <div class="item-inner">
+                    <div class="item-title">Algorithm</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                  <a href="https://www.freecodecamp.org/" target="_blank" rel="noopener noreferrer" class="item-link item-content external">
+                    <div class="item-media"><img src="imgs/FCCIcon.png" style="height: 32px;"></div>
+                    <div class="item-inner">
+                    </div>
+                  </a>
+                </li>
+                <li>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" class="item-link item-content external">
+                      <div class="item-media"><img src="imgs/MDNIcon.png" style="width: 32px;"></div>
+                      <div class="item-inner">
+                        <div class="item-title">Javascript</div>
+                        <div class="item-after">MDN</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                      <a href="https://guide.freecodecamp.org/javascript/es6/" target="_blank" rel="noopener noreferrer" class="item-link item-content external">
+                          <div class="item-media"><img src="imgs/FCCIcon2.png" style="width: 38px;"></div>                        <div class="item-inner">
+                          <div class="item-title">ES6</div>
+                          <div class="item-after">FCC</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                        <a  href="https://framework7.io/docs/" target="_blank" rel="noopener noreferrer" class="item-link item-content external">
+                            <div class="item-media"><img src="imgs/Fr7Icon.png" style="width: 32px;"></div>                           <div class="item-inner">
+                            <div class="item-title">Framework7</div>
+                            <div class="item-after">Docs</div>
+                          </div>
+                        </a>
+                      </li>
+            </ul>
+            
+            </div>                  
+            
+            <!-- 
+
+
+                    Refer to documentation to add a proper looking list
+                                Algorithm Definition Wiki Link
+                                About Javascript
+                                Es6
+                                FreecodeCamp
+                                So on...
+
+                  -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main safe-areas">
+      <!-- Page, data-name contains page name which can be used in callbacks -->
+      <div class="page" data-name="home">
+        <!-- Top Navbar -->
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="left">
+              <a href="#" class="link icon-only panel-open" data-panel="left">
+                <i class="icon f7-icons ios-only">menu</i>
+                <i class="icon material-icons md-only">menu</i>
+              </a>
+            </div>
+            <div class="title sliding">AlgorithMachine</div>
+            <div class="right">
+              <a href="#" class="link icon-only panel-open" data-panel="right">
+                <i class="icon f7-icons ios-only">menu</i>
+                <i class="icon material-icons md-only">menu</i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Toolbar-->
+        <!-- Scrollable page content-->
+        
+        <div class="page-content" style="background-color: #c8cff1;">
+            <div style="display:none;"><h2>Changes to make:</h2><p><hr>Fix Colorscheme<hr>Those blue hamburger menu icons need to change colors<hr> out how to link around the page within F7<hr>Any additional features?<hr>How do I want the cards to sit on large viewport taking into account that there are only 7 of them, maybe make the image smaller and the input/output larger<hr>Is 7 algorithms enough? I can add the others they just take a bit more work because they have multiple inputs<hr>Might as well doodle a little logo</p></div>
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url(https://images.unsplash.com/photo-1483664852095-d6cc6870702d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)" class="card-header align-items-flex-end">Celcius Temperature Converter</div>
+                <div class="card-content card-content-padding">
+                  <p class="date">function convertToF(celsius) {
+                      let fahrenheit = (celsius * 9/5) + 32 ;
+                      return fahrenheit;
+                    };</p>
+                  <p>Enter a temperature in Celcius to convert to Fahrenheit:</p>
+                </div>
+              <div class="card-footer"><div>Temperature in Celcius:<input id="tempInput" type="text" size="4" onkeyup="setTimeout(convertMe(convertToF,'tempInput','tempOutput'), 100)"></div><div>Temperature in Fahrenheit:<p id="tempOutput"></p></div></div>
+                
+              </div>
+              <div class="card demo-card-header-pic">
+                  <div style="background-image:url(https://images.unsplash.com/photo-1536250136195-1772ab2d3786?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1532&q=80)" class="card-header align-items-flex-end">String Reverser</div>
+                  <div class="card-content card-content-padding">
+                    <p class="date">let array = [...str];
+                        let backwardsArray = array.reverse();
+                        let result = backwardsArray.toString().replace(/,/g, '');
+                        return result;
+                      };</p>
+                    <p>Submit a string of letters and words to have it reversed!</p>
+                  </div>
+                  <div class="card-footer"><div>Input:<input id="rvrseInput"type="text" placeholder="Write a string here!" onkeyup="setTimeout(convertMe(reverseString,'rvrseInput','strRvrseOut'), 1000)"></div><div>Output:<p id="strRvrseOut"></p></div></div>
+                </div>
+                <div class="card demo-card-header-pic">
+                    <div style="background-image:url(https://images.unsplash.com/photo-1533226458520-6f71cffeaa6a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1275&q=80)" class="card-header align-items-flex-end">Missing Letter!</div>
+                    <div class="card-content card-content-padding">
+                      <p class="date">function fearNotLetter(str) {
+                          let alphabet = "abcdefghijklmnopqrstuvwxyz",
+                              chunk = alphabet.slice(alphabet.indexOf(str[0]), alphabet.indexOf(str[0]) + str.length + 1);
+                          for (let l of chunk){
+                            if (!str.includes(l)){
+                              return l;
+                            }
+                        }
+                        };</p>
+                      <p>Finds the first missing letter in a alphabetical series! (try abcdefghjk or lmnpqrs!)</p>
+                    </div>
+                    <div class="card-footer"><div>Series of Letters:<input id="missing" type="text" placeholder="Write a string here!" onkeyup="setTimeout(convertMe(fearNotLetter,'missing','missingOut'), 1000)"></div><div>Was this your letter?<p id="missingOut"></p></div></div>
+                  </div>
+                  <div class="card demo-card-header-pic">
+                      <div style="background-image:url(https://images.unsplash.com/photo-1513957723230-c330c6152342?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80)" class="card-header align-items-flex-end">To Uppercase</div>
+                      <div class="card-content card-content-padding">
+                        <code class="date">function titleCase(str) {
+                            return str.toLowerCase().replace(/(^|\s)\S/g, (L) => L.toUpperCase());
+                          };</code>
+                        <p>Makes the first letter of each word in a string uppercase.</p>
+                      </div>
+                      <div class="card-footer"><div>Write a sentence:<input id="upperIn" type="text" placeholder="Write a string here!" onkeyup="setTimeout(convertMe(titleCase,'upperIn','upperOut'), 1000)"></div><div>Was this your letter?<p id="upperOut"></p></div></div>
+                    </div>
+                      <div class="card demo-card-header-pic">
+                          <div style="background-image:url(https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80)" class="card-header align-items-flex-end">Factorialize</div>
+                          <div class="card-content card-content-padding">
+                            <p class="date">function factorialize(num) {
+                                let posIntegers = [];
+                                if (num == 0){ return 1};
+                                while (num > 0){
+                                  posIntegers.push(num);
+                                  num--;
+                                }
+                                return posIntegers.reduce( (a,b) => a * b );
+                               };</p>
+                            <p>Factorialize a number:</p>
+                          </div>
+                          <div class="card-footer"><div>Input goes here:<input id="firstNum" type="text" onkeyup="setTimeout(convertMe(factorialize,'firstNum','secondNum'), 1000)"></div><div>Output<p id="secondNum"></p></div></div>
+                        </div>
+                  <div class="card demo-card-header-pic">
+                      <div style="background-image:url(https://images.unsplash.com/photo-1537033206914-9d3551ff8103?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)" class="card-header align-items-flex-end">Pig Latin Translator</div>
+                      <div class="card-content card-content-padding">
+                        <p class="date">function translatePigLatin(str) {
+                            var pigLatin = '';
+                            var regex = /[aeiou]/gi;
+                            if (str[0].match(regex)) {
+                              pigLatin = str + 'way';
+                            } else if(str.match(regex) === null) {
+                              pigLatin = str + 'ay';
+                            } else {
+                              var vowelIndice = str.indexOf(str.match(regex)[0]);
+                              pigLatin = str.substr(vowelIndice) + str.substr(0, vowelIndice) + 'ay';
+                            }
+                            return pigLatin;
+                          }</p>
+                        <p>Translates a word into Pig Latin!</p>
+                      </div>
+                      <div class="card-footer"><div>Sensible Word:<input id="pigIn" type="text" placeholder="Write a string here!" onkeyup="setTimeout(convertMe(translatePigLatin,'pigIn','pigOut'), 1000)"></div><div>Veritable Nonsense:<p id="pigOut"></p></div></div>
+                    </div>
+                    <div class="card demo-card-header-pic">
+                        <div style="background-image:url(https://images.unsplash.com/photo-1507413245164-6160d8298b31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80)" class="card-header align-items-flex-end">DNA Matcher</div>
+                        <div class="card-content card-content-padding">
+                          <code class="date">function pairElement(str) {
+                              str = str.toUpperCase();
+                              const pairs = {
+                                "A": "T",
+                                "T": "A",
+                                "C": "G",
+                                "G": "C"
+                              }
+                              let arr = str.split("");
+                              return arr.map(x => [x,pairs[x]]);
+                            };
+                            };</code>
+                          <p>Returns a DNA pair based on input (cytosine [C], guanine [G], adenine [A] or thymine [T])</p>
+                        </div>
+                        <div class="card-footer"><div>Array:<input id="dnaIn" type="text" placeholder="Write a string here!" onkeyup="setTimeout(convertMe(pairElement,'dnaIn','dnaOut'), 1000)"></div><div>Result:<p id="dnaOut"></p></div></div>
+                      </div>
+        <br>
+        <br>
+
+  <!-- Cordova -->
+  <!--
+  <script src="cordova.js"></script>
+  -->
+
+  <!-- Framework7 library -->
+  <script src="framework7/js/framework7.bundle.min.js"></script>
+
+  <!-- App routes -->
+  <script src="js/routes.js"></script>
+
+  <!-- Your custom app scripts -->
+  <script src="js/app.js"></script>
+  <script src="js/main.js"></script>
+</body></html>
