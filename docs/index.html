@@ -186,13 +186,13 @@ input:active{
                         let result = backwardsArray.toString().replace(/,/g, '');
                         return result;
                       };</code>
-                    <p>Submit a string of letters and words to have it reversed!</p>
+                    <p id="theFinder">Submit a string of letters and words to have it reversed!</p>
                     <div>Input:<input id="rvrseInput"type="text" placeholder="Write a string here!" onkeyup="setTimeout(convertMe(reverseString,'rvrseInput','strRvrseOut'), 1000)"></div>
                   </div>
                   <div class="card-footer"><div>Output:<p id="strRvrseOut"></p></div></div>
                 </div>
                 <div class="card demo-card-header-pic">
-                    <div id="theFinder" style="background-image:url(https://images.unsplash.com/photo-1533226458520-6f71cffeaa6a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1275&q=80)" class="card-header align-items-flex-end">Missing Letter!</div>
+                    <div  style="background-image:url(https://images.unsplash.com/photo-1533226458520-6f71cffeaa6a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1275&q=80)" class="card-header align-items-flex-end">Missing Letter!</div>
                     <div class="card-content card-content-padding">
                       <code class="code date">function fearNotLetter(str) {
                           let alphabet = "abcdefghijklmnopqrstuvwxyz",
