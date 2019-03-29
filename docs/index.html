@@ -32,7 +32,7 @@
   color: #fff;
   }
   .card-footer{
-    background-color: #f3e8c9;
+    background-color: #fbfbfd;
   }
   .card-content{
     background-color: #f4f5fc;
@@ -43,7 +43,7 @@
 
 }
 .navbar{
-  background-color:#6579d3; 
+  background-color:#787ED4; 
   color:#f9f2d7;
 }
 .page-content{
@@ -52,8 +52,8 @@
 li{
   background-color:#6a83f1;
 }
-code{
-  display: inline;
+.code{
+  display: none;
 }
 .contents-list-imgs{
   object-fit: cover;
@@ -61,12 +61,15 @@ code{
   height:48px;
   border-radius: 15px;
 }
-input:hover{
-  background-color: white;
+input{
+  height:40px;
+  font-size: 80px;
 }
-#mapIcon{
-  margin-right: 18px;
+
+input:active{
+  border-bottom: medium, solid, #6a83f1;
 }
+
   </style>
 </head>
 <body>
@@ -79,7 +82,7 @@ input:hover{
         <div class="page">
           <div class="navbar">
             <div class="navbar-inner">
-              <div class="title">Table of Contents</div>
+              <div class="title">Information</div>
             </div>
           </div>
           <div class="page-content">
@@ -145,23 +148,14 @@ input:hover{
                 <i class="icon material-icons md-only" style="color:lavender;">menu</i>
               </a>
             </div>
+            
             <div class="title sliding">AlgorithMachine</div>
-            <div class="sliding" style="margin-right: 50px;">
-                <a href="#">
-
-                </a>
-              </div>
               <div class="right">
-            <div class="link icon-only" id="mapIcon">
+            <div class="link icon-only" >
+              
                 <a class="ac-6" href="#">
                   <i class="icon f7-icons ios-only" style="color:lavender;">drawers</i>
                   <i class="icon material-icons md-only" style="color:lavender;">drawers</i>
-                </a>
-              </div>
-              <div class="link icon-only" id="mapIcon">
-                <a class="ac-6" href="#">
-                  <i class="icon f7-icons ios-only" style="color:lavender;">list</i>
-                  <i class="icon material-icons md-only" style="color:lavender;">list</i>
                 </a>
               </div>
               </div>
@@ -176,31 +170,33 @@ input:hover{
             <div class="card demo-card-header-pic">
                 <div id="theCelc" style="background-image:url(https://images.unsplash.com/photo-1483664852095-d6cc6870702d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)" class="card-header align-items-flex-end">Celcius Temperature Converter</div>
                 <div class="card-content card-content-padding">
-                  <code class="date codeInfo">function convertToF(celsius) {
+                  <code class="date code">function convertToF(celsius) {
                       let fahrenheit = (celsius * 9/5) + 32 ;
                       return fahrenheit;
                     };</code>
                   <p>Enter a temperature in Celcius to convert to Fahrenheit:</p>
+                  <div>Temperature in Celcius:<input id="tempInput" type="text" size="8" placeholder="Number" onkeyup="setTimeout(convertMe(convertToF,'tempInput','tempOutput'), 100)"></div>
                 </div>
-              <div class="card-footer"><div>Temperature in Celcius:<input id="tempInput" type="text" size="4" onkeyup="setTimeout(convertMe(convertToF,'tempInput','tempOutput'), 100)"></div><div>Temperature in Fahrenheit:<p id="tempOutput"></p></div></div>
+              <div class="card-footer"><div>Temperature in Fahrenheit:<p id="tempOutput"></p></div></div>
                 
               </div>
               <div class="card demo-card-header-pic">
                   <div id="theReverse" style="background-image:url(https://images.unsplash.com/photo-1536250136195-1772ab2d3786?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1532&q=80)" class="card-header align-items-flex-end">String Reverser</div>
                   <div class="card-content card-content-padding">
-                    <code class="date">function reverseString(str) {let array = [...str];
+                    <code class="code date">function reverseString(str) {let array = [...str];
                         let backwardsArray = array.reverse();
                         let result = backwardsArray.toString().replace(/,/g, '');
                         return result;
                       };</code>
                     <p>Submit a string of letters and words to have it reversed!</p>
+                    <div>Input:<input id="rvrseInput"type="text" placeholder="Write a string here!" onkeyup="setTimeout(convertMe(reverseString,'rvrseInput','strRvrseOut'), 1000)"></div>
                   </div>
-                  <div class="card-footer"><div>Input:<input id="rvrseInput"type="text" placeholder="Write a string here!" onkeyup="setTimeout(convertMe(reverseString,'rvrseInput','strRvrseOut'), 1000)"></div><div>Output:<p id="strRvrseOut"></p></div></div>
+                  <div class="card-footer"><div>Output:<p id="strRvrseOut"></p></div></div>
                 </div>
                 <div class="card demo-card-header-pic">
                     <div id="theFinder" style="background-image:url(https://images.unsplash.com/photo-1533226458520-6f71cffeaa6a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1275&q=80)" class="card-header align-items-flex-end">Missing Letter!</div>
                     <div class="card-content card-content-padding">
-                      <code class="date">function fearNotLetter(str) {
+                      <code class="code date">function fearNotLetter(str) {
                           let alphabet = "abcdefghijklmnopqrstuvwxyz",
                               chunk = alphabet.slice(alphabet.indexOf(str[0]), alphabet.indexOf(str[0]) + str.length + 1);
                           for (let l of chunk){
@@ -210,23 +206,25 @@ input:hover{
                         }
                         };</code>
                       <p id="theUpper">Finds the first missing letter in a alphabetical series! (try abcdefghjk or lmnpqrs!)</p>
+                      <div>Series of Letters:<input id="missing" type="text" placeholder="Write a string here!" onkeyup="setTimeout(convertMe(fearNotLetter,'missing','missingOut'), 1000)"></div>
                     </div>
-                    <div class="card-footer"><div>Series of Letters:<input id="missing" type="text" placeholder="Write a string here!" onkeyup="setTimeout(convertMe(fearNotLetter,'missing','missingOut'), 1000)"></div><div>Was this your letter?<p id="missingOut"></p></div></div>
+                    <div class="card-footer"><div>Was this your letter?<p id="missingOut"></p></div></div>
                   </div>
                   <div class="card demo-card-header-pic">
                       <div  style="background-image:url(https://images.unsplash.com/photo-1513957723230-c330c6152342?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80)" class="card-header align-items-flex-end">To Uppercase</div>
                       <div class="card-content card-content-padding">
-                        <code class="date">function titleCase(str) {
+                        <code class="code date">function titleCase(str) {
                             return str.toLowerCase().replace(/(^|\s)\S/g, (L) => L.toUpperCase());
                           };</code>
                         <p id="theFactor">Makes the first letter of each word in a string uppercase.</p>
+                        <div>Write a sentence:<input id="upperIn" type="text" placeholder="Write a string here!" onkeyup="setTimeout(convertMe(titleCase,'upperIn','upperOut'), 1000)"></div>
                       </div>
-                      <div class="card-footer"><div>Write a sentence:<input id="upperIn" type="text" placeholder="Write a string here!" onkeyup="setTimeout(convertMe(titleCase,'upperIn','upperOut'), 1000)"></div><div>Was this your letter?<p id="upperOut"></p></div></div>
+                      <div class="card-footer"><div>Can you hear me now?<p id="upperOut"></p></div></div>
                     </div>
                 <div class="card demo-card-header-pic">
                     <div  style="background-image:url(https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80)" class="card-header align-items-flex-end">Factorialize</div>
                     <div class="card-content card-content-padding">
-                      <p class="date">function factorialize(num) {
+                      <p class="code date">function factorialize(num) {
                           let posIntegers = [];
                           if (num == 0){ return 1};
                           while (num > 0){
@@ -236,13 +234,14 @@ input:hover{
                           return posIntegers.reduce( (a,b) => a * b );
                           };</p>
                       <p id="thePig">Factorialize a number:</p>
+                      <div>Stick with a smaller number:<input id="firstNum" type="number" onkeyup="setTimeout(convertMe(factorialize,'firstNum','secondNum'), 1000)"></div>
                     </div>
-                    <div class="card-footer"><div>Input goes here:<input id="firstNum" type="text" onkeyup="setTimeout(convertMe(factorialize,'firstNum','secondNum'), 1000)"></div><div>Output<p id="secondNum"></p></div></div>
+                    <div class="card-footer"><div>Output<p id="secondNum"></p></div></div>
                   </div>
                   <div class="card demo-card-header-pic">
                       <div  style="background-image:url(https://images.unsplash.com/photo-1537033206914-9d3551ff8103?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)" class="card-header align-items-flex-end">Pig Latin Translator</div>
                       <div class="card-content card-content-padding">
-                        <code class="date">function translatePigLatin(str) {
+                        <code class="code date">function translatePigLatin(str) {
                             var pigLatin = '';
                             var regex = /[aeiou]/gi;
                             if (str[0].match(regex)) {
@@ -256,13 +255,14 @@ input:hover{
                             return pigLatin;
                           }</code>
                         <p id="theDNA">Translates a word into Pig Latin!</p>
+                        <div>Sensible Word:<input id="pigIn" type="text" placeholder="Write a string here!" onkeyup="setTimeout(convertMe(translatePigLatin,'pigIn','pigOut'), 1000)"></div>
                       </div>
-                      <div class="card-footer"><div>Sensible Word:<input id="pigIn" type="text" placeholder="Write a string here!" onkeyup="setTimeout(convertMe(translatePigLatin,'pigIn','pigOut'), 1000)"></div><div>Veritable Nonsense:<p id="pigOut"></p></div></div>
+                      <div class="card-footer"><div>Veritable Nonsense:<p id="pigOut"></p></div></div>
                     </div>
                     <div class="card demo-card-header-pic">
                         <div  style="background-image:url(https://images.unsplash.com/photo-1507413245164-6160d8298b31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80)" class="card-header align-items-flex-end">DNA Matcher</div>
                         <div class="card-content card-content-padding">
-                          <code class="date">function pairElement(str) {
+                          <code class="code date">function pairElement(str) {
                               str = str.toUpperCase();
                               const pairs = {
                                 "A": "T",
@@ -275,8 +275,9 @@ input:hover{
                             };
                             };</code>
                           <p>Returns a DNA pair based on input (cytosine [C], guanine [G], adenine [A] or thymine [T])</p>
+                          <div>Put your DNA here:<input id="dnaIn" type="text" placeholder="aagtcc" onkeyup="setTimeout(convertMe(pairElement,'dnaIn','dnaOut'), 1000)"></div>
                         </div>
-                        <div class="card-footer"><div>Array:<input id="dnaIn" type="text" placeholder="Write a string here!" onkeyup="setTimeout(convertMe(pairElement,'dnaIn','dnaOut'), 1000)"></div><div>Result:<p id="dnaOut"></p></div></div>
+                        <div class="card-footer"><div>Result:<p id="dnaOut"></p></div></div>
                       </div>
         <br>
         <br>

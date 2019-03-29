@@ -1,6 +1,3 @@
-const codeInfo = document.getElementsByTagName('code');
-
-
 function convertMe(func, input, output){
   let sendIn = document.getElementById(input).value;
   document.getElementById(output).innerHTML = "";
@@ -49,14 +46,26 @@ var ac6 = app.actions.create({
       },
       {
         text: 'Toggle Code',
-        icon: '<img class="contents-list-imgs" onclick="toggleCode()" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1655&q=80"/>'
+        icon: `<a href="#" onclick="toggle_visibility('code')"class="external"><img class="contents-list-imgs" src="https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1666&q=80"/></a>`
       },
     ]
   ]
 });
 
+function toggle_visibility(cl){
+  var els = document.getElementsByClassName(cl);
+  for(var i=0; i<els.length; ++i){
+     var s = els[i].style;
+     s.display = s.display==='block' ? 'none' : 'block';
+  };
+}
+
+
 function toggleCode(){
-   codeInfo.style.display = 'none';
+  let codeInfo = document.getElementsByClassName('code');
+  console.log(codeInfo);
+  codeInfo.style.display == "block" ? codeInfo.style.display = "none" : 
+  codeInfo.style.display = "block";
 }
 
 //Convert Celsius to Fahrenheit
