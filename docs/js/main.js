@@ -1,9 +1,63 @@
+const codeInfo = document.getElementsByTagName('code');
+
+
 function convertMe(func, input, output){
   let sendIn = document.getElementById(input).value;
   document.getElementById(output).innerHTML = "";
   document.getElementById(output).innerHTML = func(sendIn);
 };
 
+$$('.ac-6').on('click', function () {
+  ac6.open();
+});
+
+var ac6 = app.actions.create({
+  grid: true,
+  buttons: [
+    [
+      {
+        text: 'Celcius',
+        icon: '<a href="#theTop" class="external"><img class="contents-list-imgs" src="https://images.unsplash.com/photo-1483664852095-d6cc6870702d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"/></a>'
+      },
+      {
+        text: 'Reverser',
+        icon: '<a href="#theReverse" class="external"><img class="contents-list-imgs" src="https://images.unsplash.com/photo-1536250136195-1772ab2d3786?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1532&q=80"/></a>'
+      },
+      {
+        text: 'Alphabet',
+        icon: '<a href="#theFinder" class="external"><img class="contents-list-imgs" src="https://images.unsplash.com/photo-1533226458520-6f71cffeaa6a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1275&q=80"/></a>'
+      },
+    ],
+    [
+      {
+        text: 'Uppercase',
+        icon: '<a href="#theUpper" class="external"><img class="contents-list-imgs" src="https://images.unsplash.com/photo-1513957723230-c330c6152342?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"/></a>'
+      },
+      {
+        text: 'Factorialize',
+        icon: '<a href="#theFactor" class="external"><img class="contents-list-imgs" src="https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"/></a>'
+      },
+      {
+        text: 'Pig Latin',
+        icon: '<a href="#thePig" class="external"><img class="contents-list-imgs" src="https://images.unsplash.com/photo-1537033206914-9d3551ff8103?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"/></a>'
+      },
+    ],
+    [
+      {
+        text: 'DNA Pair',
+        icon: '<a href="#theDNA" class="external"><img class="contents-list-imgs" src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"/></a>'
+      },
+      {
+        text: 'Toggle Code',
+        icon: '<img class="contents-list-imgs" onclick="toggleCode()" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1655&q=80"/>'
+      },
+    ]
+  ]
+});
+
+function toggleCode(){
+   codeInfo.style.display = 'none';
+}
 
 //Convert Celsius to Fahrenheit
 function convertToF(celsius) {
