@@ -262,7 +262,7 @@ function pairElement(str) {
 
 function fearNotLetter(str) {
   let alphabet = "abcdefghijklmnopqrstuvwxyz";
-  str = str.trim();
+  str = str.trim().toLowerCase;
       chunk = alphabet.slice(alphabet.indexOf(str[0]), alphabet.indexOf(str[0]) + str.length + 1);
   for (let l of chunk){
     if (!str.includes(l)){
