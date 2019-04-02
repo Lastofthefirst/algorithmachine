@@ -1,1 +1,46 @@
 /* Your app styles here */
+.demo-card-header-pic .card-header {
+    height: 40vw;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    }
+    .card-footer{
+      background-color: #fbfbfd;
+    }
+    .card-content{
+      background-color: #f4f5fc;
+      color:rgb(12, 61, 136);
+    }
+    .demo-card-header-pic .card-content-padding .date{
+    color: #8e8e93;
+  
+  }
+  .navbar{
+    background-color:#787ED4; 
+    color:#f9f2d7;
+  }
+  .page-content{
+    background-color:#c8cff1;
+  }
+  li{
+    background-color:#6a83f1;
+  }
+  .code{
+    display: none;
+  }
+  .contents-list-imgs{
+    object-fit: cover;
+    width:48px;
+    height:48px;
+    border-radius: 15px;
+  }
+  input{
+    height:40px;
+    font-size: 80px;
+  }
+  
+  input:active{
+    border-bottom: medium, solid, #6a83f1;
+  }
+  

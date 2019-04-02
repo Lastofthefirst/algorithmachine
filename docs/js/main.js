@@ -45,6 +45,20 @@ var ac6 = app.actions.create({
         icon: '<a href="#theDNA" class="external"><img class="contents-list-imgs" src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"/></a>'
       },
       {
+        text: 'Carpet Calculator',
+        icon: `<a href="#theCarpet" onclick="toggle_visibility('code')"class="external"><img class="contents-list-imgs" src="https://images.unsplash.com/photo-1486563232043-254f15b9059c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=60"/></a>`
+      },
+      {
+        text: 'Paint the Walls',
+        icon: `<a href="#theWalls" onclick="toggle_visibility('code')"class="external"><img class="contents-list-imgs" src="https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1575&q=80"/></a>`
+      },
+    ],
+    [
+      {
+        text: 'Solar Calculator',
+        icon: `<a href="#theSolar" onclick="toggle_visibility('code')"class="external"><img class="contents-list-imgs" src="https://images.unsplash.com/photo-1521618755572-156ae0cdd74d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1512&q=80"/></a>`
+      },
+      {
         text: 'Toggle Code',
         icon: `<a href="#" onclick="toggle_visibility('code')"class="external"><img class="contents-list-imgs" src="https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1666&q=80"/></a>`
       },
@@ -341,4 +355,16 @@ function uniteUnique(...rest) {
   return [...new Set(bigArr)];
 };
 
+//Calcs Sq ft of a circle room
+function floor(diameter){
+  let radius = diameter/2;
+  let floorArea = Math.PI * (radius * radius);
+  return floorArea + " Square Foot";
+}
 
+function walls(height){
+  let radius = document.getElementById('carpetIn').value/2;
+  let circumference = 2 * Math.PI * radius;
+  let wallArea = circumference * height;
+  return wallArea;
+}

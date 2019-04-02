@@ -24,53 +24,6 @@
   <link rel="stylesheet" href="css/icons.css">
   <link rel="stylesheet" href="css/app.css">
   <link rel="stylesheet" href="css/framework7-icons.css">
-  <style>
-  .demo-card-header-pic .card-header {
-  height: 40vw;
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  }
-  .card-footer{
-    background-color: #fbfbfd;
-  }
-  .card-content{
-    background-color: #f4f5fc;
-    color:rgb(12, 61, 136);
-  }
-  .demo-card-header-pic .card-content-padding .date{
-  color: #8e8e93;
-
-}
-.navbar{
-  background-color:#787ED4; 
-  color:#f9f2d7;
-}
-.page-content{
-  background-color:#c8cff1;
-}
-li{
-  background-color:#6a83f1;
-}
-.code{
-  display: none;
-}
-.contents-list-imgs{
-  object-fit: cover;
-  width:48px;
-  height:48px;
-  border-radius: 15px;
-}
-input{
-  height:40px;
-  font-size: 80px;
-}
-
-input:active{
-  border-bottom: medium, solid, #6a83f1;
-}
-
-  </style>
 </head>
 <body>
   <div id="app">
@@ -164,7 +117,14 @@ input:active{
         
         <div  class="page-content" style="background-color: #c8cff1;">
           <div id="theTop"></div>
-            <div style="display:none;"><h2>Changes to make:</h2><p><hr>Fix Colorscheme<hr>Any additional features?<hr>How do I want the cards to sit on large viewport taking into account that there are only 7 of them, maybe make the image smaller and the input/output larger<hr>Is 7 algorithms enough? I can add the others they just take a bit more work because they have multiple inputs<hr>Might as well doodle a little logo</p></div>
+
+
+
+
+
+
+
+
             <div class="card demo-card-header-pic">
                 <div id="theCelc" style="background-image:url(https://images.unsplash.com/photo-1483664852095-d6cc6870702d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)" class="card-header align-items-flex-end">Celcius Temperature Converter</div>
                 <div class="card-content card-content-padding">
@@ -272,11 +232,57 @@ input:active{
                               return arr.map(x => [x,pairs[x]]);
                             };
                             };</code>
-                          <p>Returns a DNA pair based on input (cytosine [C], guanine [G], adenine [A] or thymine [T])</p>
+                          <p id="theCarpet">Returns a DNA pair based on input (cytosine [C], guanine [G], adenine [A] or thymine [T])</p>
                           <div>Put your DNA here:<input id="dnaIn" type="text" placeholder="aagtcc" onkeyup="setTimeout(convertMe(pairElement,'dnaIn','dnaOut'), 1000)"></div>
                         </div>
                         <div class="card-footer"><div>Result:<p id="dnaOut"></p></div></div>
                       </div>
+                      <div class="card demo-card-header-pic">
+                          <div id="" style="background-image:url(https://images.unsplash.com/photo-1486563232043-254f15b9059c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=60)" class="card-header align-items-flex-end">Carpet Calculator</div>
+                          <div class="card-content card-content-padding">
+                            <code class="code date">
+                                function floor(diameter){
+                                  let radius = diameter/2;
+                                  let floorArea = Math.PI * (radius * radius);
+                                  return floorArea + " Square Foot";
+                                }
+                              </code>
+                            <p id="theWalls">Calculate how many Sq Ft of carpet needed for a circular room.</p>
+                            <div>Input:<input id="carpetIn"type="text" placeholder="Wall to Wall" onkeyup="setTimeout(convertMe(floor,'carpetIn','carpetOut'), 1000)"></div>
+                          </div>
+                          <div class="card-footer"><div>Output:<div id="carpetOut"></div></div></div>
+                        </div>
+              
+                        <div class="card demo-card-header-pic">
+                            <div id="" style="background-image:url(https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1575&q=80)" class="card-header align-items-flex-end">Paint the Walls</div>
+                            <div class="card-content card-content-padding">
+                              <code class="code date">function walls(height){
+                                  let radius = document.getElementById('carpetIn').value/2;
+                                  let circumference = 2 * Math.PI * radius;
+                                  let wallArea = circumference * height;
+                                  return wallArea;
+                                }
+                                </code>
+                              <p id="theSolar">Paint the walls of a circular room, don't forget to measure the floor first.</p>
+                              <div>Input:<input id="paintIn"type="text" placeholder="Measure the Floor first!" onkeyup="setTimeout(convertMe(walls,'paintIn','paintOut'), 1000)"></div>
+                            </div>
+                            <div class="card-footer"><div>Output:<div id="paintOut"></div></div></div>
+                          </div>
+                          <div class="card demo-card-header-pic">
+                              <div id="" style="background-image:url(https://images.unsplash.com/photo-1521618755572-156ae0cdd74d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1512&q=80)" class="card-header align-items-flex-end">Solar Panel Calculator</div>
+                              <div class="card-content card-content-padding">
+                                <code class="code date">function walls(height){
+                                    let radius = document.getElementById('carpetIn').value/2;
+                                    let circumference = 2 * Math.PI * radius;
+                                    let wallArea = circumference * height;
+                                    return wallArea;
+                                  }
+                                  </code>
+                                <p id="">Paint the walls of a circular room, don't forget to measure the floor first.</p>
+                                <div>Input:<input id="paintIn"type="text" placeholder="Measure the Floor first!" onkeyup="setTimeout(convertMe(walls,'paintIn','paintOut'), 1000)"></div>
+                              </div>
+                              <div class="card-footer"><div>Output:<div id="paintOut"></div></div></div>
+                            </div>
         <br>
         <br>
 
