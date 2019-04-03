@@ -268,20 +268,60 @@
                             </div>
                             <div class="card-footer"><div>Output:<div id="paintOut"></div></div></div>
                           </div>
+
                           <div class="card demo-card-header-pic">
-                              <div id="" style="background-image:url(https://images.unsplash.com/photo-1521618755572-156ae0cdd74d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1512&q=80)" class="card-header align-items-flex-end">Solar Panel Calculator</div>
+                              <div id="" style="background-image:url(imgs/Solarmap.png)" class="card-header align-items-flex-end">Sunlight Zone Selector</div>
+                              
                               <div class="card-content card-content-padding">
-                                <code class="code date">function walls(height){
-                                    let radius = document.getElementById('carpetIn').value/2;
-                                    let circumference = 2 * Math.PI * radius;
-                                    let wallArea = circumference * height;
-                                    return wallArea;
-                                  }
+                                <code class="code date">function sunHours(){
+                                    let hrs;
+                                    let theZone = document.forms.solarForm.zone.selectedIndex;
+                                    theZone +=1;
+                                    switch(theZone) {
+                                      case 1:
+                                        hrs = 6;
+                                        break;
+                                      case 2:
+                                        hrs = 5.5;
+                                      case 3:
+                                        hrs = 5;
+                                        break;
+                                      case 4:
+                                        hrs = 4.5;
+                                        break;
+                                      case 5:
+                                        hrs = 4.2;
+                                        break;
+                                      case 6:
+                                        hrs = 3.5;
+                                        break;
+                                      default:
+                                        hrs = 0;
+                                    }
+                                      return hrs;
+                                    }
                                   </code>
-                                <p id="">Paint the walls of a circular room, don't forget to measure the floor first.</p>
-                                <div>Input:<input id="paintIn"type="text" placeholder="Measure the Floor first!" onkeyup="setTimeout(convertMe(walls,'paintIn','paintOut'), 1000)"></div>
-                              </div>
-                              <div class="card-footer"><div>Output:<div id="paintOut"></div></div></div>
+                                <p id="">Each zone receives different amounts of daily sunlight. Select your zone. Also select your average monthly KWh.There are three available Solar Panels, please select one.</p>
+                                <div style="display:flex; justify-content: space-between;"><select id="zoneIn">
+                                    <option>Zone 1</option>
+                                    <option>Zone 2</option>
+                                    <option>Zone 3</option>
+                                    <option>Zone 4</option>
+                                    <option>Zone 5</option>
+                                    <option>Zone 6</option>
+                                  </select>
+                                  <input id="kwhIn" type="number" placeholder="Example: 1752">
+                                  <label>Select a Panel<select id="panelIn">
+                                      <option value="250">Axitec AC-250P/156-60S  </option>
+                                      <option value="275">Canadian Solar CS6K-275M   </option>
+                                      <option value="260">Hanwha Q.Pro BFR-G4.260  </option>
+                                    </select></label>
+                                  </div>
+
+                              <div id=""  onclick="calculateSolar()" style="background-image:url(https://images.unsplash.com/photo-1521618755572-156ae0cdd74d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1512&q=80)" class="card-header align-items-flex-end">Solar Panel Calculator</div>
+                            </div>
+                              <div class="card-footer"><div>Output:<div id="solarRecommendation"></div></div></div>
+                            </div>
                             </div>
         <br>
         <br>
