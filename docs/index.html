@@ -121,6 +121,41 @@
                 <!-- Scrollable page content-->
 
                 <div class="page-content" style="background-color: #c8cff1;">
+
+
+                    <div class="card demo-card-header-pic">
+                        <div id="theCelc" style="background-image:url(https://images.unsplash.com/photo-1483664852095-d6cc6870702d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)" class="card-header align-items-flex-end">Demo Card</div>
+                        <div class="card-content card-content-padding">
+                            <code class="date code">function convertToF(celsius) {
+                                let fahrenheit = (celsius * 9/5) + 32 ;
+                                return fahrenheit;
+                                };</code>
+                            <p>Enter a temperature in Celcius to convert to Fahrenheit:</p>
+                            <div class="list no-hairlines-md">
+                                <ul>
+                                  <li style="background-color:#e7e9f8;" class="item-content item-input item-input-outline">
+                                    <div class="item-media">
+                                      <i class="icon demo-list-icon"></i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title item-floating-label">Name</div>
+                                      <div class="item-input-wrap">
+                                        <input type="text" placeholder="Your name">
+                                        <span class="input-clear-button"></span>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  </ul>
+                                </div>
+                        </div>
+                        <div class="card-footer">
+                            <div>Temperature in Fahrenheit:<p id="tempOutput"></p>
+                            </div>
+                        </div>
+  
+                    </div>
+
+
                     <div class="card demo-card-header-pic">
                         <div id="theSolar" style="background-image:url(imgs/Solarmap.png)" class="card-header align-items-flex-end">Sunlight Zone Selector</div>
 
@@ -185,7 +220,7 @@
                             </div>
                             <div id="" style="background-image:url(https://images.unsplash.com/photo-1521618755572-156ae0cdd74d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1512&q=80)" class="card-header align-items-flex-end">Solar Panel Calculator</div>
                         </div>
-                        <code></code><button onclick="calculateSolar()" class="col button button-raised" id="theCarpet">Submit</button>
+                        <code></code><div style="display:flex; justify-content:center;"><button onclick="calculateSolar()" style=" width: 200px;" class="col button button-raised" id="theCarpet">Submit</button></div>
                         <div class="card-footer">
                             <div id="solarRecommendation">Output:</div>
                         </div>
@@ -202,7 +237,7 @@
                                 }
                             </code>
                             <p id="theWalls">Calculate how many Sq Ft of carpet needed for a circular room.</p>
-                            <div>Input:<input id="carpetIn" type="text" placeholder="Wall to Wall" onkeyup="setTimeout(convertMe(floor,'carpetIn','carpetOut'), 1000)"></div>
+                            <div>Input:<input class="item-input item-input-outline" id="carpetIn" type="text" placeholder="Wall to Wall" onkeyup="setTimeout(convertMe(floor,'carpetIn','carpetOut'), 1000)"></div>
                         </div>
                         <div class="card-footer">
                             <div>Output:<div id="carpetOut"></div>
