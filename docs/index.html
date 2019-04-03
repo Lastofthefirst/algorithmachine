@@ -1,8 +1,10 @@
+
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <!--
+    <meta charset="utf-8">
+    <!--
   Customize this policy to fit your own app's needs. For more guidance, see:
       https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
   Some notes:
@@ -11,333 +13,374 @@
       * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
           * Enable inline JS: add 'unsafe-inline' to default-src
   -->
-  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="theme-color" content="#2196f3">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="msapplication-tap-highlight" content="no">
-  <title>AlgorithMachine</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#2196f3">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>AlgorithMachine</title>
 
-  <link rel="stylesheet" href="framework7/css/framework7.bundle.min.css">
-  <link rel="stylesheet" href="css/icons.css">
-  <link rel="stylesheet" href="css/app.css">
-  <link rel="stylesheet" href="css/framework7-icons.css">
+    <link rel="stylesheet" href="framework7/css/framework7.bundle.min.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/framework7-icons.css">
 </head>
+
 <body>
-  <div id="app">
-    <!-- Status bar overlay for fullscreen mode-->
-    <div class="statusbar"></div>
-    <!-- Left panel with cover effect-->
-    <div class="panel panel-left panel-cover theme-dark">
-      <div class="view">
-        <div class="page">
-          <div class="navbar">
-            <div class="navbar-inner">
-              <div class="title">Information</div>
-            </div>
-          </div>
-          <div class="page-content">
-              <div class="list media-list">
-                <ul>
-                  <li>
-                    <a href="https://en.wikipedia.org/wiki/Algorithm" target="_blank" rel="noopener noreferrer"  class="item-link item-content external">
-                      <div class="item-media"><img src="imgs/WikipediaIcon.png" style="width: 32px;"></div>
-                      <div class="item-inner">
-                        <div class="item-title">Algorithm</div>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                      <a href="https://www.freecodecamp.org/" target="_blank" rel="noopener noreferrer" class="item-link item-content external">
-                        <div class="item-media"><img src="imgs/FCCIcon2.png" style="width: 38px;"></div>
-                        <div class="item-inner">
-                            <img src="imgs/FCCIcon.png" style="height: 32px;">
+    <div id="app">
+        <!-- Status bar overlay for fullscreen mode-->
+        <div class="statusbar"></div>
+        <!-- Left panel with cover effect-->
+        <div class="panel panel-left panel-cover theme-dark">
+            <div class="view">
+                <div class="page">
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <div class="title">Information</div>
                         </div>
-                      </a>
-                    </li>
-                    <li>
-                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" class="item-link item-content external">
-                          <div class="item-media"><img src="imgs/MDNIcon.png" style="width: 32px;"></div>
-                          <div class="item-inner">
-                            <div class="item-title">Javascript</div>
-                            <div class="item-after">MDN</div>
-                          </div>
-                        </a>
-                      </li>
-                      <li>
-                          <a href="https://guide.freecodecamp.org/javascript/es6/" target="_blank" rel="noopener noreferrer" class="item-link item-content external">
-                              <div class="item-media"><img src="imgs/FCCIcon2.png" style="width: 38px;"></div>                        <div class="item-inner">
-                              <div class="item-title">ES6</div>
-                              <div class="item-after">FCC</div>
-                            </div>
-                          </a>
-                        </li>
-                        <li>
-                            <a  href="https://framework7.io/docs/" target="_blank" rel="noopener noreferrer" class="item-link item-content external">
-                                <div class="item-media"><img src="imgs/Fr7Icon.png" style="width: 32px;"></div>                           <div class="item-inner">
-                                <div class="item-title">Framework7</div>
-                                <div class="item-after">Docs</div>
-                              </div>
+                    </div>
+                    <div class="page-content">
+                        <div class="list media-list">
+                            <ul>
+                                <li>
+                                    <a href="https://en.wikipedia.org/wiki/Algorithm" target="_blank" rel="noopener noreferrer" class="item-link item-content external">
+                                        <div class="item-media"><img src="imgs/WikipediaIcon.png" style="width: 32px;"></div>
+                                        <div class="item-inner">
+                                            <div class="item-title">Algorithm</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.freecodecamp.org/" target="_blank" rel="noopener noreferrer" class="item-link item-content external">
+                                        <div class="item-media"><img src="imgs/FCCIcon2.png" style="width: 38px;"></div>
+                                        <div class="item-inner">
+                                            <img src="imgs/FCCIcon.png" style="height: 32px;">
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" class="item-link item-content external">
+                                        <div class="item-media"><img src="imgs/MDNIcon.png" style="width: 32px;"></div>
+                                        <div class="item-inner">
+                                            <div class="item-title">Javascript</div>
+                                            <div class="item-after">MDN</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://guide.freecodecamp.org/javascript/es6/" target="_blank" rel="noopener noreferrer" class="item-link item-content external">
+                                        <div class="item-media"><img src="imgs/FCCIcon2.png" style="width: 38px;"></div>
+                                        <div class="item-inner">
+                                            <div class="item-title">ES6</div>
+                                            <div class="item-after">FCC</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://framework7.io/docs/" target="_blank" rel="noopener noreferrer" class="item-link item-content external">
+                                        <div class="item-media"><img src="imgs/Fr7Icon.png" style="width: 32px;"></div>
+                                        <div class="item-inner">
+                                            <div class="item-title">Framework7</div>
+                                            <div class="item-after">Docs</div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main safe-areas">
+            <!-- Page, data-name contains page name which can be used in callbacks -->
+            <div class="page" data-name="home">
+                <!-- Top Navbar -->
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="left">
+                            <a href="#" class="link icon-only panel-open" data-panel="left">
+                                <i class="icon f7-icons ios-only" style="color:lavender;">menu</i>
+                                <i class="icon material-icons md-only" style="color:lavender;">menu</i>
                             </a>
-                          </li>
-                </ul>
+                        </div>
+
+                        <div class="title sliding">AlgorithMachine</div>
+                        <div class="right">
+
+                            <a class="ac-6" href="#">
+                                <i class="icon link icon-only f7-icons ios-only" style="color:lavender; margin-right: 15px;">layers</i>
+                                <i class="icon material-icons md-only" style="color:lavender; margin-right: 15px;">layers</i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Your main view, should have "view-main" class -->
-    <div class="view view-main safe-areas">
-      <!-- Page, data-name contains page name which can be used in callbacks -->
-      <div class="page" data-name="home">
-        <!-- Top Navbar -->
-        <div class="navbar">
-          <div class="navbar-inner">
-            <div class="left">
-              <a href="#" class="link icon-only panel-open" data-panel="left">
-                <i class="icon f7-icons ios-only" style="color:lavender;">menu</i>
-                <i class="icon material-icons md-only" style="color:lavender;">menu</i>
-              </a>
-            </div>
-            
-            <div class="title sliding">AlgorithMachine</div>
-              <div class="right">
-              
-                <a class="ac-6" href="#">
-                  <i class="icon link icon-only f7-icons ios-only" style="color:lavender; margin-right: 15px;">layers</i>
-                  <i class="icon material-icons md-only" style="color:lavender; margin-right: 15px;">layers</i>
-                </a>
-              </div>
-          </div>
-        </div>
-        <!-- Toolbar-->
-        <!-- Scrollable page content-->
-        
-        <div  class="page-content" style="background-color: #c8cff1;">
-          <div id="theTop"></div>
+                <!-- Toolbar-->
+                <!-- Scrollable page content-->
 
-
-
-
-
-
-
-
-            <div class="card demo-card-header-pic">
-                <div id="theCelc" style="background-image:url(https://images.unsplash.com/photo-1483664852095-d6cc6870702d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)" class="card-header align-items-flex-end">Celcius Temperature Converter</div>
-                <div class="card-content card-content-padding">
-                  <code class="date code">function convertToF(celsius) {
-                      let fahrenheit = (celsius * 9/5) + 32 ;
-                      return fahrenheit;
-                    };</code>
-                  <p>Enter a temperature in Celcius to convert to Fahrenheit:</p>
-                  <div>Temperature in Celcius:<input id="tempInput" type="text" size="8" placeholder="Number" onkeyup="setTimeout(convertMe(convertToF,'tempInput','tempOutput'), 100)"></div>
-                </div>
-              <div class="card-footer"><div>Temperature in Fahrenheit:<p id="tempOutput"></p></div></div>
-                
-              </div>
-              <div class="card demo-card-header-pic">
-                  <div id="theReverse" style="background-image:url(https://images.unsplash.com/photo-1536250136195-1772ab2d3786?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1532&q=80)" class="card-header align-items-flex-end">String Reverser</div>
-                  <div class="card-content card-content-padding">
-                    <code class="code date">function reverseString(str) {let array = [...str];
-                        let backwardsArray = array.reverse();
-                        let result = backwardsArray.toString().replace(/,/g, '');
-                        return result;
-                      };</code>
-                    <p id="theFinder">Submit a string of letters and words to have it reversed!</p>
-                    <div>Input:<input id="rvrseInput"type="text" placeholder="Write a string here!" onkeyup="setTimeout(convertMe(reverseString,'rvrseInput','strRvrseOut'), 1000)"></div>
-                  </div>
-                  <div class="card-footer"><div>Output:<p id="strRvrseOut"></p></div></div>
-                </div>
-                <div class="card demo-card-header-pic">
-                    <div  style="background-image:url(https://images.unsplash.com/photo-1533226458520-6f71cffeaa6a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1275&q=80)" class="card-header align-items-flex-end">Missing Letter!</div>
-                    <div class="card-content card-content-padding">
-                      <code class="code date">function fearNotLetter(str) {
-                          let alphabet = "abcdefghijklmnopqrstuvwxyz",
-                              chunk = alphabet.slice(alphabet.indexOf(str[0]), alphabet.indexOf(str[0]) + str.length + 1);
-                          for (let l of chunk){
-                            if (!str.includes(l)){
-                              return l;
-                            }
-                        }
-                        };</code>
-                      <p id="theUpper">Finds the first missing letter in a alphabetical series! (try abcdefghjk or lmnpqrs!)</p>
-                      <div>Series of Letters:<input id="missing" type="text" placeholder="Write a string here!" onkeyup="setTimeout(convertMe(fearNotLetter,'missing','missingOut'), 1000)"></div>
-                    </div>
-                    <div class="card-footer"><div>Was this your letter?<p id="missingOut"></p></div></div>
-                  </div>
-                  <div class="card demo-card-header-pic">
-                      <div  style="background-image:url(https://images.unsplash.com/photo-1513957723230-c330c6152342?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80)" class="card-header align-items-flex-end">To Uppercase</div>
-                      <div class="card-content card-content-padding">
-                        <code class="code date">function titleCase(str) {
-                            return str.toLowerCase().replace(/(^|\s)\S/g, (L) => L.toUpperCase());
-                          };</code>
-                        <p id="theFactor">Makes the first letter of each word in a string uppercase.</p>
-                        <div>Write a sentence:<input id="upperIn" type="text" placeholder="Write a string here!" onkeyup="setTimeout(convertMe(titleCase,'upperIn','upperOut'), 1000)"></div>
-                      </div>
-                      <div class="card-footer"><div>Can you hear me now?<p id="upperOut"></p></div></div>
-                    </div>
-                <div class="card demo-card-header-pic">
-                    <div  style="background-image:url(https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80)" class="card-header align-items-flex-end">Factorialize</div>
-                    <div class="card-content card-content-padding">
-                      <p class="code date">function factorialize(num) {
-                          let posIntegers = [];
-                          if (num == 0){ return 1};
-                          while (num > 0){
-                            posIntegers.push(num);
-                            num--;
-                          }
-                          return posIntegers.reduce( (a,b) => a * b );
-                          };</p>
-                      <p id="thePig">Multiplies a number by each number that preceeds it:</p>
-                      <div>Start with a smaller number:<input id="firstNum" type="number" onkeyup="setTimeout(convertMe(factorialize,'firstNum','secondNum'), 1000)"></div>
-                    </div>
-                    <div class="card-footer"><div>Output<p id="secondNum"></p></div></div>
-                  </div>
-                  <div class="card demo-card-header-pic">
-                      <div  style="background-image:url(https://images.unsplash.com/photo-1537033206914-9d3551ff8103?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)" class="card-header align-items-flex-end">Pig Latin Translator</div>
-                      <div class="card-content card-content-padding">
-                        <code class="code date">function translatePigLatin(str) {
-                            var pigLatin = '';
-                            var regex = /[aeiou]/gi;
-                            if (str[0].match(regex)) {
-                              pigLatin = str + 'way';
-                            } else if(str.match(regex) === null) {
-                              pigLatin = str + 'ay';
-                            } else {
-                              var vowelIndice = str.indexOf(str.match(regex)[0]);
-                              pigLatin = str.substr(vowelIndice) + str.substr(0, vowelIndice) + 'ay';
-                            }
-                            return pigLatin;
-                          }</code>
-                        <p id="theDNA">Translates a word into Pig Latin!</p>
-                        <div>Sensible Word:<input id="pigIn" type="text" placeholder="Write a string here!" onkeyup="setTimeout(convertMe(translatePigLatin,'pigIn','pigOut'), 1000)"></div>
-                      </div>
-                      <div class="card-footer"><div>Veritable Nonsense:<p id="pigOut"></p></div></div>
-                    </div>
+                <div class="page-content" style="background-color: #c8cff1;">
                     <div class="card demo-card-header-pic">
-                        <div  style="background-image:url(https://images.unsplash.com/photo-1507413245164-6160d8298b31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80)" class="card-header align-items-flex-end">DNA Matcher</div>
-                        <div class="card-content card-content-padding">
-                          <code class="code date">function pairElement(str) {
-                              str = str.toUpperCase();
-                              const pairs = {
-                                "A": "T",
-                                "T": "A",
-                                "C": "G",
-                                "G": "C"
-                              }
-                              let arr = str.split("");
-                              return arr.map(x => [x,pairs[x]]);
-                            };
-                            };</code>
-                          <p id="theCarpet">Returns a DNA pair based on input (cytosine [C], guanine [G], adenine [A] or thymine [T])</p>
-                          <div>Put your DNA here:<input id="dnaIn" type="text" placeholder="aagtcc" onkeyup="setTimeout(convertMe(pairElement,'dnaIn','dnaOut'), 1000)"></div>
-                        </div>
-                        <div class="card-footer"><div>Result:<p id="dnaOut"></p></div></div>
-                      </div>
-                      <div class="card demo-card-header-pic">
-                          <div id="" style="background-image:url(https://images.unsplash.com/photo-1486563232043-254f15b9059c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=60)" class="card-header align-items-flex-end">Carpet Calculator</div>
-                          <div class="card-content card-content-padding">
-                            <code class="code date">
-                                function floor(diameter){
-                                  let radius = diameter/2;
-                                  let floorArea = Math.PI * (radius * radius);
-                                  return floorArea + " Square Foot";
-                                }
-                              </code>
-                            <p id="theWalls">Calculate how many Sq Ft of carpet needed for a circular room.</p>
-                            <div>Input:<input id="carpetIn"type="text" placeholder="Wall to Wall" onkeyup="setTimeout(convertMe(floor,'carpetIn','carpetOut'), 1000)"></div>
-                          </div>
-                          <div class="card-footer"><div>Output:<div id="carpetOut"></div></div></div>
-                        </div>
-              
-                        <div class="card demo-card-header-pic">
-                            <div id="" style="background-image:url(https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1575&q=80)" class="card-header align-items-flex-end">Paint the Walls</div>
-                            <div class="card-content card-content-padding">
-                              <code class="code date">function walls(height){
-                                  let radius = document.getElementById('carpetIn').value/2;
-                                  let circumference = 2 * Math.PI * radius;
-                                  let wallArea = circumference * height;
-                                  return wallArea;
-                                }
-                                </code>
-                              <p id="theSolar">Paint the walls of a circular room, don't forget to measure the floor first.</p>
-                              <div>Input:<input id="paintIn"type="text" placeholder="Measure the Floor first!" onkeyup="setTimeout(convertMe(walls,'paintIn','paintOut'), 1000)"></div>
-                            </div>
-                            <div class="card-footer"><div>Output:<div id="paintOut"></div></div></div>
-                          </div>
+                        <div id="theSolar" style="background-image:url(imgs/Solarmap.png)" class="card-header align-items-flex-end">Sunlight Zone Selector</div>
 
-                          <div class="card demo-card-header-pic">
-                              <div id="" style="background-image:url(imgs/Solarmap.png)" class="card-header align-items-flex-end">Sunlight Zone Selector</div>
-                              
-                              <div class="card-content card-content-padding">
-                                <code class="code date">function sunHours(){
-                                    let hrs;
-                                    let theZone = document.forms.solarForm.zone.selectedIndex;
-                                    theZone +=1;
-                                    switch(theZone) {
-                                      case 1:
-                                        hrs = 6;
-                                        break;
-                                      case 2:
-                                        hrs = 5.5;
-                                      case 3:
-                                        hrs = 5;
-                                        break;
-                                      case 4:
-                                        hrs = 4.5;
-                                        break;
-                                      case 5:
-                                        hrs = 4.2;
-                                        break;
-                                      case 6:
-                                        hrs = 3.5;
-                                        break;
-                                      default:
-                                        hrs = 0;
-                                    }
-                                      return hrs;
-                                    }
-                                  </code>
-                                <p id="">Each zone receives different amounts of daily sunlight. Select your zone. Also select your average monthly KWh.There are three available Solar Panels, please select one.</p>
-                                <div style="display:flex; justify-content: space-between;"><select id="zoneIn">
+                        <div class="card-content card-content-padding">
+                            <code class="code date">function sunHours(){
+                                let hrs;
+                                let theZone = document.forms.solarForm.zone.selectedIndex;
+                                theZone +=1;
+                                switch(theZone) {
+                                case 1:
+                                hrs = 6;
+                                break;
+                                case 2:
+                                hrs = 5.5;
+                                case 3:
+                                hrs = 5;
+                                break;
+                                case 4:
+                                hrs = 4.5;
+                                break;
+                                case 5:
+                                hrs = 4.2;
+                                break;
+                                case 6:
+                                hrs = 3.5;
+                                break;
+                                default:
+                                hrs = 0;
+                                }
+                                return hrs;
+                                }
+                                <br>
+                                function dailyKwh(){
+                                let monthlyUse = document.getElementById('kwhIn').value;
+                                return monthlyUse * 12/365;
+                                }
+                                <br>
+                                function calculatePanel(){
+                                let userChoice = document.getElementById('panelIn').selectedIndex;
+                                let panelOptions = document.getElementById('panelIn').options;
+                                let power = panelOptions[userChoice].value;
+                                let name = panelOptions[userChoice].text;
+                                let x = [power, name]
+                                return x;
+                                }
+                            </code>
+                            <p id="">Each zone receives different amounts of daily sunlight. Select your zone. Also select your average monthly KWh.There are three available Solar Panels, please select one.</p>
+                            <div style="display:flex; justify-content: space-between;"><select id="zoneIn">
                                     <option>Zone 1</option>
                                     <option>Zone 2</option>
                                     <option>Zone 3</option>
                                     <option>Zone 4</option>
                                     <option>Zone 5</option>
                                     <option>Zone 6</option>
-                                  </select>
-                                  <input id="kwhIn" type="number" placeholder="Example: 1752">
-                                  <label>Select a Panel<select id="panelIn">
-                                      <option value="250">Axitec AC-250P/156-60S  </option>
-                                      <option value="275">Canadian Solar CS6K-275M   </option>
-                                      <option value="260">Hanwha Q.Pro BFR-G4.260  </option>
+                                </select>
+                                <input id="kwhIn" type="number" placeholder="Example: 1752">
+                                <label>Select a Panel<select id="panelIn">
+                                        <option value="250">Axitec AC-250P/156-60S </option>
+                                        <option value="275">Canadian Solar CS6K-275M </option>
+                                        <option value="260">Hanwha Q.Pro BFR-G4.260 </option>
                                     </select></label>
-                                  </div>
-
-                              <div id=""  onclick="calculateSolar()" style="background-image:url(https://images.unsplash.com/photo-1521618755572-156ae0cdd74d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1512&q=80)" class="card-header align-items-flex-end">Solar Panel Calculator</div>
                             </div>
-                              <div class="card-footer"><div>Output:<div id="solarRecommendation"></div></div></div>
+                            <div id="" style="background-image:url(https://images.unsplash.com/photo-1521618755572-156ae0cdd74d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1512&q=80)" class="card-header align-items-flex-end">Solar Panel Calculator</div>
+                        </div>
+                        <code></code><button onclick="calculateSolar()" class="col button button-raised" id="theCarpet">Submit</button>
+                        <div class="card-footer">
+                            <div id="solarRecommendation">Output:</div>
+                        </div>
+                    </div>
+
+                    <div class="card demo-card-header-pic">
+                        <div id="" style="background-image:url(https://images.unsplash.com/photo-1486563232043-254f15b9059c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=60)" class="card-header align-items-flex-end">Carpet Calculator</div>
+                        <div class="card-content card-content-padding">
+                            <code class="code date">
+                                function floor(diameter){
+                                let radius = diameter/2;
+                                let floorArea = Math.PI * (radius * radius);
+                                return floorArea + " Square Foot";
+                                }
+                            </code>
+                            <p id="theWalls">Calculate how many Sq Ft of carpet needed for a circular room.</p>
+                            <div>Input:<input id="carpetIn" type="text" placeholder="Wall to Wall" onkeyup="setTimeout(convertMe(floor,'carpetIn','carpetOut'), 1000)"></div>
+                        </div>
+                        <div class="card-footer">
+                            <div>Output:<div id="carpetOut"></div>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="card demo-card-header-pic">
+                        <div id="" style="background-image:url(https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1575&q=80)" class="card-header align-items-flex-end">Paint the Walls</div>
+                        <div class="card-content card-content-padding">
+                            <code class="code date">function walls(height){
+                                let radius = document.getElementById('carpetIn').value/2;
+                                let circumference = 2 * Math.PI * radius;
+                                let wallArea = circumference * height;
+                                return wallArea;
+                                }
+                            </code>
+                            <p id="thePig">Paint the walls of a circular room, don't forget to measure the floor first.</p>
+                            <div>Input:<input id="paintIn" type="text" placeholder="Measure the Floor first!" onkeyup="setTimeout(convertMe(walls,'paintIn','paintOut'), 1000)"></div>
+                        </div>
+                        <div class="card-footer">
+                            <div>Output:<div id="paintOut"></div>
                             </div>
-        <br>
-        <br>
+                        </div>
+                    </div>
+                    <div class="card demo-card-header-pic">
+                        <div style="background-image:url(https://images.unsplash.com/photo-1537033206914-9d3551ff8103?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)" class="card-header align-items-flex-end">Pig Latin Translator</div>
+                        <div class="card-content card-content-padding">
+                            <code class="code date">function translatePigLatin(str) {
+                                var pigLatin = '';
+                                var regex = /[aeiou]/gi;
+                                if (str[0].match(regex)) {
+                                pigLatin = str + 'way';
+                                } else if(str.match(regex) === null) {
+                                pigLatin = str + 'ay';
+                                } else {
+                                var vowelIndice = str.indexOf(str.match(regex)[0]);
+                                pigLatin = str.substr(vowelIndice) + str.substr(0, vowelIndice) + 'ay';
+                                }
+                                return pigLatin;
+                                }</code>
+                            <p id="theReverse">Translates a word into Pig Latin!</p>
+                            <div>Sensible Word:<input id="pigIn" type="text" placeholder="Write a string here!" onkeyup="setTimeout(convertMe(translatePigLatin,'pigIn','pigOut'), 1000)"></div>
+                        </div>
+                        <div class="card-footer">
+                            <div>Veritable Nonsense:<p id="pigOut"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card demo-card-header-pic">
+                        <div style="background-image:url(https://images.unsplash.com/photo-1536250136195-1772ab2d3786?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1532&q=80)" class="card-header align-items-flex-end">String Reverser</div>
+                        <div class="card-content card-content-padding">
+                            <code class="code date">function reverseString(str) {let array = [...str];
+                                let backwardsArray = array.reverse();
+                                let result = backwardsArray.toString().replace(/,/g, '');
+                                return result;
+                                };</code>
+                            <p id="theFinder">Submit a string of letters and words to have it reversed!</p>
+                            <div>Input:<input id="rvrseInput" type="text" placeholder="Write a string here!" onkeyup="setTimeout(convertMe(reverseString,'rvrseInput','strRvrseOut'), 1000)"></div>
+                        </div>
+                        <div class="card-footer">
+                            <div>Output:<p id="strRvrseOut"></p>
+                            </div>
+                        </div>
+                    </div>
 
-  <!-- Cordova -->
-  <!--
-  <script src="cordova.js"></script>
-  -->
+                    <div class="card demo-card-header-pic">
+                        <div style="background-image:url(https://images.unsplash.com/photo-1533226458520-6f71cffeaa6a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1275&q=80)" class="card-header align-items-flex-end">Missing Letter!</div>
+                        <div class="card-content card-content-padding">
+                            <code class="code date">function fearNotLetter(str) {
+                                let alphabet = "abcdefghijklmnopqrstuvwxyz",
+                                chunk = alphabet.slice(alphabet.indexOf(str[0]), alphabet.indexOf(str[0]) + str.length + 1);
+                                for (let l of chunk){
+                                if (!str.includes(l)){
+                                return l;
+                                }
+                                }
+                                };</code>
+                            <p id="theUpper">Finds the first missing letter in a alphabetical series! (try abcdefghjk or lmnpqrs!)</p>
+                            <div>Series of Letters:<input id="missing" type="text" placeholder="Write a string here!" onkeyup="setTimeout(convertMe(fearNotLetter,'missing','missingOut'), 1000)"></div>
+                        </div>
+                        <div class="card-footer">
+                            <div>Was this your letter?<p id="missingOut"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card demo-card-header-pic">
+                        <div style="background-image:url(https://images.unsplash.com/photo-1513957723230-c330c6152342?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80)" class="card-header align-items-flex-end">To Uppercase</div>
+                        <div class="card-content card-content-padding">
+                            <code class="code date">function titleCase(str) {
+                                return str.toLowerCase().replace(/(^|\s)\S/g, (L) => L.toUpperCase());
+                                };</code>
+                            <p id="theFactor">Makes the first letter of each word in a string uppercase.</p>
+                            <div>Write a sentence:<input id="upperIn" type="text" placeholder="Write a string here!" onkeyup="setTimeout(convertMe(titleCase,'upperIn','upperOut'), 1000)"></div>
+                        </div>
+                        <div class="card-footer">
+                            <div>Can you hear me now?<p id="upperOut"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card demo-card-header-pic">
+                        <div style="background-image:url(https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80)" class="card-header align-items-flex-end">Factorialize</div>
+                        <div class="card-content card-content-padding">
+                            <code class="code date">function factorialize(num) {
+                                let posIntegers = [];
+                                if (num == 0){ return 1};
+                                while (num > 0){
+                                posIntegers.push(num);
+                                num--;
+                                }
+                                return posIntegers.reduce( (a,b) => a * b );
+                                };</code>
+                            <p id="theDNA">Multiplies a number by each number that preceeds it:</p>
+                            <div>Start with a smaller number:<input id="firstNum" type="number" onkeyup="setTimeout(convertMe(factorialize,'firstNum','secondNum'), 1000)"></div>
+                        </div>
+                        <div class="card-footer">
+                            <div>Output<p id="secondNum"></p>
+                            </div>
+                        </div>
+                    </div>
 
-  <!-- Framework7 library -->
-  <script src="framework7/js/framework7.bundle.min.js"></script>
+                    <div class="card demo-card-header-pic">
+                        <div style="background-image:url(https://images.unsplash.com/photo-1507413245164-6160d8298b31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80)" class="card-header align-items-flex-end">DNA Matcher</div>
+                        <div class="card-content card-content-padding">
+                            <code class="code date">function pairElement(str) {
+                                str = str.toUpperCase();
+                                const pairs = {
+                                "A": "T",
+                                "T": "A",
+                                "C": "G",
+                                "G": "C"
+                                }
+                                let arr = str.split("");
+                                return arr.map(x => [x,pairs[x]]);
+                                };
+                                };</code>
+                            <p id="theCelc">Returns a DNA pair based on input (cytosine [C], guanine [G], adenine [A] or thymine [T])</p>
+                            <div>Put your DNA here:<input id="dnaIn" type="text" placeholder="aagtcc" onkeyup="setTimeout(convertMe(pairElement,'dnaIn','dnaOut'), 1000)"></div>
+                        </div>
+                        <div class="card-footer">
+                            <div>Result:<p id="dnaOut"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card demo-card-header-pic">
+                        <div id="theCelc" style="background-image:url(https://images.unsplash.com/photo-1483664852095-d6cc6870702d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)" class="card-header align-items-flex-end">Celcius Temperature Converter</div>
+                        <div class="card-content card-content-padding">
+                            <code class="date code">function convertToF(celsius) {
+                                let fahrenheit = (celsius * 9/5) + 32 ;
+                                return fahrenheit;
+                                };</code>
+                            <p>Enter a temperature in Celcius to convert to Fahrenheit:</p>
+                            <div>Temperature in Celcius:<input id="tempInput" type="text" size="8" placeholder="Number" onkeyup="setTimeout(convertMe(convertToF,'tempInput','tempOutput'), 100)"></div>
+                        </div>
+                        <div class="card-footer">
+                            <div>Temperature in Fahrenheit:<p id="tempOutput"></p>
+                            </div>
+                        </div>
 
-  <!-- App routes -->
-  <script src="js/routes.js"></script>
+                    </div>
 
-  <!-- Your custom app scripts -->
-  <script src="js/app.js"></script>
-  <script src="js/main.js"></script>
-</body></html>
+
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Framework7 library -->
+    <script src="framework7/js/framework7.bundle.min.js"></script>
+
+    <!-- App routes -->
+    <script src="js/routes.js"></script>
+
+    <!-- Your custom app scripts -->
+    <script src="js/app.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

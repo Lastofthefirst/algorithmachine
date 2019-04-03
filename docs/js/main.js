@@ -13,8 +13,22 @@ var ac6 = app.actions.create({
   buttons: [
     [
       {
-        text: 'Celcius',
-        icon: '<a href="#theTop" class="external"><img class="contents-list-imgs" src="https://images.unsplash.com/photo-1483664852095-d6cc6870702d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"/></a>'
+        text: 'Solar Calculator',
+        icon: `<a href="#theSolar" class="external"><img class="contents-list-imgs" src="https://images.unsplash.com/photo-1521618755572-156ae0cdd74d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1512&q=80"/></a>`
+      },
+      {
+        text: 'Carpet Calculator',
+        icon: `<a href="#theCarpet" class="external"><img class="contents-list-imgs" src="https://images.unsplash.com/photo-1486563232043-254f15b9059c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=60"/></a>`
+      },
+      {
+        text: 'Paint the Walls',
+        icon: `<a href="#theWalls" class="external"><img class="contents-list-imgs" src="https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1575&q=80"/></a>`
+      },
+    ],
+    [
+      {
+        text: 'Pig Latin',
+        icon: '<a href="#thePig" class="external"><img class="contents-list-imgs" src="https://images.unsplash.com/photo-1537033206914-9d3551ff8103?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"/></a>'
       },
       {
         text: 'Reverser',
@@ -35,28 +49,14 @@ var ac6 = app.actions.create({
         icon: '<a href="#theFactor" class="external"><img class="contents-list-imgs" src="https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"/></a>'
       },
       {
-        text: 'Pig Latin',
-        icon: '<a href="#thePig" class="external"><img class="contents-list-imgs" src="https://images.unsplash.com/photo-1537033206914-9d3551ff8103?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"/></a>'
-      },
-    ],
-    [
-      {
         text: 'DNA Pair',
         icon: '<a href="#theDNA" class="external"><img class="contents-list-imgs" src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"/></a>'
       },
-      {
-        text: 'Carpet Calculator',
-        icon: `<a href="#theCarpet" onclick="toggle_visibility('code')"class="external"><img class="contents-list-imgs" src="https://images.unsplash.com/photo-1486563232043-254f15b9059c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=60"/></a>`
-      },
-      {
-        text: 'Paint the Walls',
-        icon: `<a href="#theWalls" onclick="toggle_visibility('code')"class="external"><img class="contents-list-imgs" src="https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1575&q=80"/></a>`
-      },
     ],
     [
       {
-        text: 'Solar Calculator',
-        icon: `<a href="#theSolar" onclick="toggle_visibility('code')"class="external"><img class="contents-list-imgs" src="https://images.unsplash.com/photo-1521618755572-156ae0cdd74d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1512&q=80"/></a>`
+        text: 'Celcius',
+        icon: '<a href="#theCelc" class="external"><img class="contents-list-imgs" src="https://images.unsplash.com/photo-1483664852095-d6cc6870702d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"/></a>'
       },
       {
         text: 'Toggle Code',
@@ -427,7 +427,6 @@ switch(theZone) {
   default:
     hrs = 0;
 }
-  console.log(hrs);
   return hrs;
 
 }
