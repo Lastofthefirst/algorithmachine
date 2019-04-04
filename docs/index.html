@@ -26,6 +26,22 @@
     <link rel="stylesheet" href="css/icons.css">
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/framework7-icons.css">
+    <style>
+    select, input {
+      border-radius: 12px !important; 
+      border: solid thin #787ED4 !important;
+      padding: 5px !important;
+      background-color: white !important;
+    }
+    .card-header{
+      text-shadow: 5px, 10px !important;
+    }
+    button{
+      color:#787ED4 !important;
+      background-color: white !important;
+      margin: 5px !important;
+    }
+    </style>
 </head>
 
 <body>
@@ -123,41 +139,9 @@
                 <div class="page-content" style="background-color: #c8cff1;">
 
 
+                    
                     <div class="card demo-card-header-pic">
-                        <div id="theCelc" style="background-image:url(https://images.unsplash.com/photo-1483664852095-d6cc6870702d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)" class="card-header align-items-flex-end">Demo Card</div>
-                        <div class="card-content card-content-padding">
-                            <code class="date code">function convertToF(celsius) {
-                                let fahrenheit = (celsius * 9/5) + 32 ;
-                                return fahrenheit;
-                                };</code>
-                            <p>Enter a temperature in Celcius to convert to Fahrenheit:</p>
-                            <div class="list no-hairlines-md">
-                                <ul>
-                                  <li style="background-color:#e7e9f8;" class="item-content item-input item-input-outline">
-                                    <div class="item-media">
-                                      <i class="icon demo-list-icon"></i>
-                                    </div>
-                                    <div class="item-inner">
-                                      <div class="item-title item-floating-label">Name</div>
-                                      <div class="item-input-wrap">
-                                        <input type="text" placeholder="Your name">
-                                        <span class="input-clear-button"></span>
-                                      </div>
-                                    </div>
-                                  </li>
-                                  </ul>
-                                </div>
-                        </div>
-                        <div class="card-footer">
-                            <div>Temperature in Fahrenheit:<p id="tempOutput"></p>
-                            </div>
-                        </div>
-  
-                    </div>
-
-
-                    <div class="card demo-card-header-pic">
-                        <div id="theSolar" style="background-image:url(imgs/Solarmap.png)" class="card-header align-items-flex-end">Sunlight Zone Selector</div>
+                        <div id="theSolar" style="background-image:url(imgs/Solarmap.png)" class="card-header align-items-flex-end">Solar Panel Estimate</div>
 
                         <div class="card-content card-content-padding">
                             <code class="code date">function sunHours(){
@@ -201,26 +185,42 @@
                                 let x = [power, name]
                                 return x;
                                 }
+                                <br>
+                                function calculateSolar(){
+                                  let dailyUseKw = dailyKwh();
+                                  let sunHoursPerDay = sunHours();
+                                
+                                  let minKwNeeds = dailyUseKw/sunHoursPerDay;
+                                  let realKwNeeds = minKwNeeds * 1.25;
+                                
+                                  let realWattNeeds = realKwNeeds * 1000;
+                                
+                                  let panelInfo = calculatePanel();
+                                  let panelOutput = panelInfo[0];
+                                  let panelName = panelInfo[1];
+                                
+                                  let panelsNeeded = Math.ceil(realWattNeeds/panelOutput);
+                                  document.getElementById('solarRecommendation').innerHTML = feedback;}
                             </code>
-                            <p id="">Each zone receives different amounts of daily sunlight. Select your zone. Also select your average monthly KWh.There are three available Solar Panels, please select one.</p>
-                            <div style="display:flex; justify-content: space-between;"><select id="zoneIn">
+                            <p id="">Pick a zone, estimate your monthly KWh usage, and select your choice of solar panel.</p>
+                            <div><label>Select a Zone: <select id="zoneIn">
                                     <option>Zone 1</option>
                                     <option>Zone 2</option>
                                     <option>Zone 3</option>
                                     <option>Zone 4</option>
                                     <option>Zone 5</option>
                                     <option>Zone 6</option>
-                                </select>
-                                <input id="kwhIn" type="number" placeholder="Example: 1752">
-                                <label>Select a Panel<select id="panelIn">
-                                        <option value="250">Axitec AC-250P/156-60S </option>
-                                        <option value="275">Canadian Solar CS6K-275M </option>
-                                        <option value="260">Hanwha Q.Pro BFR-G4.260 </option>
-                                    </select></label>
-                            </div>
-                            <div id="" style="background-image:url(https://images.unsplash.com/photo-1521618755572-156ae0cdd74d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1512&q=80)" class="card-header align-items-flex-end">Solar Panel Calculator</div>
+                                </select></label>
+                                <label>Average Kwh usage Monthly: <input class="myInput"id="kwhIn" type="number" placeholder="Example: 1752"></label>
+                               
+                                  </div>
+                                  <label>Select a Panel: <select id="panelIn">
+                                      <option value="250">Axitec AC-250P/156-60S </option>
+                                      <option value="275">Canadian Solar CS6K-275M </option>
+                                      <option value="260">Hanwha Q.Pro BFR-G4.260 </option>
+                                  </select></label>
                         </div>
-                        <code></code><div style="display:flex; justify-content:center;"><button onclick="calculateSolar()" style=" width: 200px;" class="col button button-raised" id="theCarpet">Submit</button></div>
+                        <code></code><div style="background-color: #f4f5fc;  display:flex; justify-content:center;"><button onclick="calculateSolar()" style=" width: 200px;" class="button button-raised" id="theCarpet">Estimate</button></div>
                         <div class="card-footer">
                             <div id="solarRecommendation">Output:</div>
                         </div>
@@ -255,7 +255,7 @@
                                 return wallArea;
                                 }
                             </code>
-                            <p id="thePig">Paint the walls of a circular room, don't forget to measure the floor first.</p>
+                            <p id="thePig">Paint the walls of a circular room, don't forget to measure the floor first in the previous algorithm.</p>
                             <div>Input:<input id="paintIn" type="text" placeholder="Measure the Floor first!" onkeyup="setTimeout(convertMe(walls,'paintIn','paintOut'), 1000)"></div>
                         </div>
                         <div class="card-footer">
