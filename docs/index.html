@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -27,20 +26,7 @@
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/framework7-icons.css">
     <style>
-    select, input {
-      border-radius: 12px !important; 
-      border: solid thin #787ED4 !important;
-      padding: 5px !important;
-      background-color: white !important;
-    }
-    .card-header{
-      text-shadow: 5px, 10px !important;
-    }
-    button{
-      color:#787ED4 !important;
-      background-color: white !important;
-      margin: 5px !important;
-    }
+
     </style>
 </head>
 
@@ -139,7 +125,7 @@
                 <div class="page-content" style="background-color: #c8cff1;">
 
 
-                    
+
                     <div class="card demo-card-header-pic">
                         <div id="theSolar" style="background-image:url(imgs/Solarmap.png)" class="card-header align-items-flex-end">Solar Panel Estimate</div>
 
@@ -187,40 +173,41 @@
                                 }
                                 <br>
                                 function calculateSolar(){
-                                  let dailyUseKw = dailyKwh();
-                                  let sunHoursPerDay = sunHours();
-                                
-                                  let minKwNeeds = dailyUseKw/sunHoursPerDay;
-                                  let realKwNeeds = minKwNeeds * 1.25;
-                                
-                                  let realWattNeeds = realKwNeeds * 1000;
-                                
-                                  let panelInfo = calculatePanel();
-                                  let panelOutput = panelInfo[0];
-                                  let panelName = panelInfo[1];
-                                
-                                  let panelsNeeded = Math.ceil(realWattNeeds/panelOutput);
-                                  document.getElementById('solarRecommendation').innerHTML = feedback;}
+                                let dailyUseKw = dailyKwh();
+                                let sunHoursPerDay = sunHours();
+
+                                let minKwNeeds = dailyUseKw/sunHoursPerDay;
+                                let realKwNeeds = minKwNeeds * 1.25;
+
+                                let realWattNeeds = realKwNeeds * 1000;
+
+                                let panelInfo = calculatePanel();
+                                let panelOutput = panelInfo[0];
+                                let panelName = panelInfo[1];
+
+                                let panelsNeeded = Math.ceil(realWattNeeds/panelOutput);
+                                document.getElementById('solarRecommendation').innerHTML = feedback;}
                             </code>
                             <p id="">Pick a zone, estimate your monthly KWh usage, and select your choice of solar panel.</p>
                             <div><label>Select a Zone: <select id="zoneIn">
-                                    <option>Zone 1</option>
-                                    <option>Zone 2</option>
-                                    <option>Zone 3</option>
-                                    <option>Zone 4</option>
-                                    <option>Zone 5</option>
-                                    <option>Zone 6</option>
+                                        <option>Zone 1</option>
+                                        <option>Zone 2</option>
+                                        <option>Zone 3</option>
+                                        <option>Zone 4</option>
+                                        <option>Zone 5</option>
+                                        <option>Zone 6</option>
+                                    </select></label>
+                                <label>Average Kwh usage Monthly: <input class="myInput" id="kwhIn" type="number" placeholder="Example: 1752"></label>
+
+                            </div>
+                            <label>Select a Panel: <select id="panelIn">
+                                    <option value="250">Axitec AC-250P/156-60S </option>
+                                    <option value="275">Canadian Solar CS6K-275M </option>
+                                    <option value="260">Hanwha Q.Pro BFR-G4.260 </option>
                                 </select></label>
-                                <label>Average Kwh usage Monthly: <input class="myInput"id="kwhIn" type="number" placeholder="Example: 1752"></label>
-                               
-                                  </div>
-                                  <label>Select a Panel: <select id="panelIn">
-                                      <option value="250">Axitec AC-250P/156-60S </option>
-                                      <option value="275">Canadian Solar CS6K-275M </option>
-                                      <option value="260">Hanwha Q.Pro BFR-G4.260 </option>
-                                  </select></label>
                         </div>
-                        <code></code><div style="background-color: #f4f5fc;  display:flex; justify-content:center;"><button onclick="calculateSolar()" style=" width: 200px;" class="button button-raised" id="theCarpet">Estimate</button></div>
+                        <code></code>
+                        <div style="background-color: #f4f5fc;  display:flex; justify-content:center;"><button onclick="calculateSolar()" style=" width: 200px;" class="button button-raised" id="theCarpet">Estimate</button></div>
                         <div class="card-footer">
                             <div id="solarRecommendation">Output:</div>
                         </div>
@@ -237,10 +224,10 @@
                                 }
                             </code>
                             <p id="theWalls">Calculate how many Sq Ft of carpet needed for a circular room.</p>
-                            <div>Input:<input class="item-input item-input-outline" id="carpetIn" type="text" placeholder="Wall to Wall" onkeyup="setTimeout(convertMe(floor,'carpetIn','carpetOut'), 1000)"></div>
+                            <div>Diameter of the room:<input class="item-input item-input-outline" id="carpetIn" type="text" placeholder="Wall to Wall" onkeyup="setTimeout(convertMe(floor,'carpetIn','carpetOut'), 1000)"></div>
                         </div>
                         <div class="card-footer">
-                            <div>Output:<div id="carpetOut"></div>
+                            <div>Sq Ft of Carpet needed:<div id="carpetOut"></div>
                             </div>
                         </div>
                     </div>
@@ -256,10 +243,10 @@
                                 }
                             </code>
                             <p id="thePig">Paint the walls of a circular room, don't forget to measure the floor first in the previous algorithm.</p>
-                            <div>Input:<input id="paintIn" type="text" placeholder="Measure the Floor first!" onkeyup="setTimeout(convertMe(walls,'paintIn','paintOut'), 1000)"></div>
+                            <div>Height of the Walls<input id="paintIn" type="text" placeholder="Measure the Floor first!" onkeyup="setTimeout(convertMe(walls,'paintIn','paintOut'), 1000)"></div>
                         </div>
                         <div class="card-footer">
-                            <div>Output:<div id="paintOut"></div>
+                            <div>Sq ft to Paint:<div id="paintOut"></div>
                             </div>
                         </div>
                     </div>
@@ -296,10 +283,10 @@
                                 return result;
                                 };</code>
                             <p id="theFinder">Submit a string of letters and words to have it reversed!</p>
-                            <div>Input:<input id="rvrseInput" type="text" placeholder="Write a string here!" onkeyup="setTimeout(convertMe(reverseString,'rvrseInput','strRvrseOut'), 1000)"></div>
+                            <div>A word or phrase:<input id="rvrseInput" type="text" placeholder="Write a string here!" onkeyup="setTimeout(convertMe(reverseString,'rvrseInput','strRvrseOut'), 1000)"></div>
                         </div>
                         <div class="card-footer">
-                            <div>Output:<p id="strRvrseOut"></p>
+                            <div>:esarhp ro drow A<p id="strRvrseOut"></p>
                             </div>
                         </div>
                     </div>
@@ -351,10 +338,10 @@
                                 return posIntegers.reduce( (a,b) => a * b );
                                 };</code>
                             <p id="theDNA">Multiplies a number by each number that preceeds it:</p>
-                            <div>Start with a smaller number:<input id="firstNum" type="number" onkeyup="setTimeout(convertMe(factorialize,'firstNum','secondNum'), 1000)"></div>
+                            <div>Start with a smaller number:<input placeholder="Number" id="firstNum" type="number" onkeyup="setTimeout(convertMe(factorialize,'firstNum','secondNum'), 1000)"></div>
                         </div>
                         <div class="card-footer">
-                            <div>Output<p id="secondNum"></p>
+                            <div>Much Bigger Number:<p id="secondNum"></p>
                             </div>
                         </div>
                     </div>
@@ -375,7 +362,7 @@
                                 };
                                 };</code>
                             <p id="theCelc">Returns a DNA pair based on input (cytosine [C], guanine [G], adenine [A] or thymine [T])</p>
-                            <div>Put your DNA here:<input id="dnaIn" type="text" placeholder="aagtcc" onkeyup="setTimeout(convertMe(pairElement,'dnaIn','dnaOut'), 1000)"></div>
+                            <div>Put your DNA here:<input required validate pattern="a|c|g|t" id="dnaIn" type="text" placeholder="aagtcc" onkeyup="setTimeout(convertMe(pairElement,'dnaIn','dnaOut'), 1000)"></div>
                         </div>
                         <div class="card-footer">
                             <div>Result:<p id="dnaOut"></p>
@@ -390,7 +377,7 @@
                                 return fahrenheit;
                                 };</code>
                             <p>Enter a temperature in Celcius to convert to Fahrenheit:</p>
-                            <div>Temperature in Celcius:<input id="tempInput" type="text" size="8" placeholder="Number" onkeyup="setTimeout(convertMe(convertToF,'tempInput','tempOutput'), 100)"></div>
+                            <div>Temperature in Celcius:<input id="tempInput" type="text" placeholder="Temperature" onkeyup="setTimeout(convertMe(convertToF,'tempInput','tempOutput'), 100)"></div>
                         </div>
                         <div class="card-footer">
                             <div>Temperature in Fahrenheit:<p id="tempOutput"></p>
