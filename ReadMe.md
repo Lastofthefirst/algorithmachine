@@ -8,7 +8,7 @@ AlgorithMachine is hosted at https://lastofthefirst.github.io/algorithmachine/ t
 
 ### Prerequisites
 
-AlgorithMachine works accross browsers including:
+AlgorithMachine works accross browsers and devices including the mobile and desktop versions of:
 
 ```
 Mozilla,
@@ -16,30 +16,6 @@ Safari,
 Chrome,
 Internet Explorer
 ```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
