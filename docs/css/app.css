@@ -64,10 +64,11 @@ input {
 
 .card-header {
     text-shadow: 5px, 10px !important;
+    background-color:black;
 }
 
 button {
-    color: #787ED4 !important;
-    background-color: white !important;
+    color: white !important;
+    background-color: #787ED4 !important;
     margin: 5px !important;
 }
