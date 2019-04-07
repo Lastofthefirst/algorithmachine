@@ -8,6 +8,7 @@
 
 .card-footer {
     background-color: #fbfbfd;
+    color: rgb(84, 76, 104);
 }
 
 .card-content {
@@ -22,7 +23,7 @@
 
 .navbar {
     background-color: #787ED4;
-    color: #f9f2d7;
+    color: #ffffff;
 }
 
 .page-content {

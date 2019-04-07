@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -26,7 +26,6 @@
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/framework7-icons.css">
     <style>
-
     </style>
 </head>
 
@@ -48,7 +47,7 @@
                             <ul>
                                 <li>
                                     <a href="https://en.wikipedia.org/wiki/Algorithm" target="_blank" rel="noopener noreferrer" class="item-link item-content external">
-                                        <div class="item-media"><img src="imgs/WikipediaIcon.png" style="width: 32px;"></div>
+                                        <div class="item-media"><img src="imgs/WikipediaIcon.png" alt="wikipedia" style="width: 32px;"></div>
                                         <div class="item-inner">
                                             <div class="item-title">Algorithm</div>
                                         </div>
@@ -56,7 +55,7 @@
                                 </li>
                                 <li>
                                     <a href="https://www.freecodecamp.org/" target="_blank" rel="noopener noreferrer" class="item-link item-content external">
-                                        <div class="item-media"><img src="imgs/FCCIcon2.png" style="width: 38px;"></div>
+                                        <div class="item-media"><img src="imgs/FCCIcon2.png" alt="Freecodecamp" style="width: 38px;"></div>
                                         <div class="item-inner">
                                             <img src="imgs/FCCIcon.png" style="height: 32px;">
                                         </div>
@@ -64,7 +63,7 @@
                                 </li>
                                 <li>
                                     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" class="item-link item-content external">
-                                        <div class="item-media"><img src="imgs/MDNIcon.png" style="width: 32px;"></div>
+                                        <div class="item-media"><img src="imgs/MDNIcon.png" alt="Mozilla Developer Network" style="width: 32px;"></div>
                                         <div class="item-inner">
                                             <div class="item-title">Javascript</div>
                                             <div class="item-after">MDN</div>
@@ -73,7 +72,7 @@
                                 </li>
                                 <li>
                                     <a href="https://guide.freecodecamp.org/javascript/es6/" target="_blank" rel="noopener noreferrer" class="item-link item-content external">
-                                        <div class="item-media"><img src="imgs/FCCIcon2.png" style="width: 38px;"></div>
+                                        <div class="item-media"><img src="imgs/FCCIcon2.png" alt="Es6 information on Freecodecamp" style="width: 38px;"></div>
                                         <div class="item-inner">
                                             <div class="item-title">ES6</div>
                                             <div class="item-after">FCC</div>
@@ -82,7 +81,7 @@
                                 </li>
                                 <li>
                                     <a href="https://framework7.io/docs/" target="_blank" rel="noopener noreferrer" class="item-link item-content external">
-                                        <div class="item-media"><img src="imgs/Fr7Icon.png" style="width: 32px;"></div>
+                                        <div class="item-media"><img src="imgs/Fr7Icon.png" alt="Framework7" style="width: 32px;"></div>
                                         <div class="item-inner">
                                             <div class="item-title">Framework7</div>
                                             <div class="item-after">Docs</div>
@@ -104,8 +103,8 @@
                     <div class="navbar-inner">
                         <div class="left">
                             <a href="#" class="link icon-only panel-open" data-panel="left">
-                                <i class="icon f7-icons ios-only" style="color:lavender;">menu</i>
-                                <i class="icon material-icons md-only" style="color:lavender;">menu</i>
+                                <i class="icon f7-icons ios-only" style="color:rgb(245, 245, 250);">menu</i>
+                                <i class="icon material-icons md-only" style="color:rgb(245, 245, 250);">menu</i>
                             </a>
                         </div>
 
@@ -113,8 +112,8 @@
                         <div class="right">
 
                             <a class="ac-6" href="#">
-                                <i class="icon link icon-only f7-icons ios-only" style="color:lavender; margin-right: 15px;">layers</i>
-                                <i class="icon material-icons md-only" style="color:lavender; margin-right: 15px;">layers</i>
+                                <i class="icon link icon-only f7-icons ios-only" style="color:rgb(245, 245, 250); margin-right: 15px;">layers</i>
+                                <i class="icon material-icons md-only" style="color:rgb(245, 245, 250); margin-right: 15px;">layers</i>
                             </a>
                         </div>
                     </div>
@@ -224,7 +223,7 @@
                                 }
                             </code>
                             <p id="theWalls">Calculate how many Sq Ft of carpet needed for a circular room.</p>
-                            <div>Diameter of the room:<input class="item-input item-input-outline" id="carpetIn" type="text" placeholder="Wall to Wall" onkeyup="setTimeout(convertMe(floor,'carpetIn','carpetOut'), 1000)"></div>
+                            <label>Diameter of the room:<input class="item-input item-input-outline" id="carpetIn" type="text" placeholder="Wall to Wall" onkeyup="setTimeout(convertMe(floor,'carpetIn','carpetOut'), 1000)"></label>
                         </div>
                         <div class="card-footer">
                             <div>Sq Ft of Carpet needed:<div id="carpetOut"></div>
@@ -243,7 +242,7 @@
                                 }
                             </code>
                             <p id="thePig">Paint the walls of a circular room, don't forget to measure the floor first in the previous algorithm.</p>
-                            <div>Height of the Walls<input id="paintIn" type="text" placeholder="Measure the Floor first!" onkeyup="setTimeout(convertMe(walls,'paintIn','paintOut'), 1000)"></div>
+                            <label>Height of the Walls:<input id="paintIn" type="text" placeholder="Measure the Floor first!" onkeyup="setTimeout(convertMe(walls,'paintIn','paintOut'), 1000)"></label>
                         </div>
                         <div class="card-footer">
                             <div>Sq ft to Paint:<div id="paintOut"></div>
@@ -267,7 +266,7 @@
                                 return pigLatin;
                                 }</code>
                             <p id="theReverse">Translates a word into Pig Latin!</p>
-                            <div>Sensible Word:<input id="pigIn" type="text" placeholder="Write a string here!" onkeyup="setTimeout(convertMe(translatePigLatin,'pigIn','pigOut'), 1000)"></div>
+                            <label>Sensible Word:<input id="pigIn" type="text" placeholder="Write a string here!" onkeyup="setTimeout(convertMe(translatePigLatin,'pigIn','pigOut'), 1000)"></label>
                         </div>
                         <div class="card-footer">
                             <div>Veritable Nonsense:<p id="pigOut"></p>
@@ -283,7 +282,7 @@
                                 return result;
                                 };</code>
                             <p id="theFinder">Submit a string of letters and words to have it reversed!</p>
-                            <div>A word or phrase:<input id="rvrseInput" type="text" placeholder="Write a string here!" onkeyup="setTimeout(convertMe(reverseString,'rvrseInput','strRvrseOut'), 1000)"></div>
+                            <label>A word or phrase:<input id="rvrseInput" type="text" placeholder="Write a string here!" onkeyup="setTimeout(convertMe(reverseString,'rvrseInput','strRvrseOut'), 1000)"></label>
                         </div>
                         <div class="card-footer">
                             <div>:esarhp ro drow A<p id="strRvrseOut"></p>
@@ -304,7 +303,7 @@
                                 }
                                 };</code>
                             <p id="theUpper">Finds the first missing letter in a alphabetical series! (try abcdefghjk or lmnpqrs!)</p>
-                            <div>Series of Letters:<input id="missing" type="text" placeholder="Write a string here!" onkeyup="setTimeout(convertMe(fearNotLetter,'missing','missingOut'), 1000)"></div>
+                            <label>Series of Letters:<input id="missing" type="text" placeholder="Write a string here!" onkeyup="setTimeout(convertMe(fearNotLetter,'missing','missingOut'), 1000)"></label>
                         </div>
                         <div class="card-footer">
                             <div>Was this your letter?<p id="missingOut"></p>
@@ -318,7 +317,7 @@
                                 return str.toLowerCase().replace(/(^|\s)\S/g, (L) => L.toUpperCase());
                                 };</code>
                             <p id="theFactor">Makes the first letter of each word in a string uppercase.</p>
-                            <div>Write a sentence:<input id="upperIn" type="text" placeholder="Write a string here!" onkeyup="setTimeout(convertMe(titleCase,'upperIn','upperOut'), 1000)"></div>
+                            <label>Write a sentence:<input id="upperIn" type="text" placeholder="Write a string here!" onkeyup="setTimeout(convertMe(titleCase,'upperIn','upperOut'), 1000)"></label>
                         </div>
                         <div class="card-footer">
                             <div>Can you hear me now?<p id="upperOut"></p>
@@ -338,7 +337,7 @@
                                 return posIntegers.reduce( (a,b) => a * b );
                                 };</code>
                             <p id="theDNA">Multiplies a number by each number that preceeds it:</p>
-                            <div>Start with a smaller number:<input placeholder="Number" id="firstNum" type="number" onkeyup="setTimeout(convertMe(factorialize,'firstNum','secondNum'), 1000)"></div>
+                            <label>Start with a smaller number:<input placeholder="Number" id="firstNum" type="number" onkeyup="setTimeout(convertMe(factorialize,'firstNum','secondNum'), 1000)"></label>
                         </div>
                         <div class="card-footer">
                             <div>Much Bigger Number:<p id="secondNum"></p>
@@ -362,7 +361,7 @@
                                 };
                                 };</code>
                             <p id="theCelc">Returns a DNA pair based on input (cytosine [C], guanine [G], adenine [A] or thymine [T])</p>
-                            <div>Put your DNA here:<input required validate pattern="a|c|g|t" id="dnaIn" type="text" placeholder="aagtcc" onkeyup="setTimeout(convertMe(pairElement,'dnaIn','dnaOut'), 1000)"></div>
+                            <label>Put your DNA here:<input required validate pattern="a|c|g|t" id="dnaIn" type="text" placeholder="aagtcc" onkeyup="setTimeout(convertMe(pairElement,'dnaIn','dnaOut'), 1000)"></label>
                         </div>
                         <div class="card-footer">
                             <div>Result:<p id="dnaOut"></p>
@@ -377,7 +376,7 @@
                                 return fahrenheit;
                                 };</code>
                             <p>Enter a temperature in Celcius to convert to Fahrenheit:</p>
-                            <div>Temperature in Celcius:<input id="tempInput" type="text" placeholder="Temperature" onkeyup="setTimeout(convertMe(convertToF,'tempInput','tempOutput'), 100)"></div>
+                            <label>Temperature in Celcius:<input id="tempInput" type="text" placeholder="Temperature" onkeyup="setTimeout(convertMe(convertToF,'tempInput','tempOutput'), 100)"></label>
                         </div>
                         <div class="card-footer">
                             <div>Temperature in Fahrenheit:<p id="tempOutput"></p>
