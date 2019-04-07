@@ -3,15 +3,6 @@
 
 <head>
     <meta charset="utf-8">
-    <!--
-  Customize this policy to fit your own app's needs. For more guidance, see:
-      https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
-  Some notes:
-      * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-      * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-      * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-          * Enable inline JS: add 'unsafe-inline' to default-src
-  -->
     <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -43,6 +34,7 @@
                         </div>
                     </div>
                     <div class="page-content">
+                        <!--Some Links to technology used to make this application as well as an explanation of what an Algorithm is.-->
                         <div class="list media-list">
                             <ul>
                                 <li>
@@ -123,7 +115,9 @@
 
                 <div class="page-content" style="background-color: #c8cff1;">
 
-
+<!-- 
+    ----- Each Algorithm is contained on a card, each card has three parts, a header with a related image, a content section with inputs and information, and a footer where the output is sent.
+-->
 
                     <div class="card demo-card-header-pic">
                         <div id="theSolar" style="background-image:url(imgs/Solarmap.png)" class="card-header align-items-flex-end">Solar Panel Estimate</div>
@@ -302,11 +296,25 @@
                                 }
                                 }
                                 };</code>
-                            <p id="theUpper">Finds the first missing letter in a alphabetical series! (try abcdefghjk or lmnpqrs!)</p>
+                            <p id="theSpinal">Finds the first missing letter in a alphabetical series! (try abcdefghjk or lmnpqrs!)</p>
                             <label>Series of Letters:<input id="missing" type="text" placeholder="Write a string here!" onkeyup="setTimeout(convertMe(fearNotLetter,'missing','missingOut'), 1000)"></label>
                         </div>
                         <div class="card-footer">
                             <div>Was this your letter?<p id="missingOut"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card demo-card-header-pic">
+                        <div style="background-image:url(https://images.unsplash.com/photo-1539815208687-a0f05e15d601?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80)" class="card-header align-items-flex-end">Spinalcase</div>
+                        <div class="card-content card-content-padding">
+                            <code class="code date">function spinalCase(str) {
+                                return str.split(/\s|_|(?=[A-Z])/).join('-').toLowerCase()
+                              }</code>
+                            <p id="theUpper">Converts a string to Spinal Case (all lowercase words joined by dashes)</p>
+                            <label>Write a sentence:<input id="spinalIn" type="text" placeholder="Write a string here!" onkeyup="setTimeout(convertMe(spinalCase,'spinalIn','spinalOut'), 1000)"></label>
+                        </div>
+                        <div class="card-footer">
+                            <div>Output:<p id="spinalOut"></p>
                             </div>
                         </div>
                     </div>

@@ -1,14 +1,17 @@
+//Crown of the set in my eyes, when I was thinking through this program and wrote this function was a great moment for me. This is when functional programming clicked for me!
 function convertMe(func, input, output) {
   let sendIn = document.getElementById(input).value;
   document.getElementById(output).innerHTML = "";
   document.getElementById(output).innerHTML = func(sendIn);
 };
 
+
+//Creates the panel that slides up from the bottom upon clicking the top right menu, drawing on the below array of objects
 $$('.ac-6').on('click', function() {
   ac6.open();
 });
 
-var ac6 = app.actions.create({
+let ac6 = app.actions.create({
   grid: true,
   buttons: [
       [{
@@ -38,6 +41,10 @@ var ac6 = app.actions.create({
           },
       ],
       [{
+              text: 'Spinalcase',
+              icon: '<a href="#theSpinal" class="external"><img class="contents-list-imgs" src="https://images.unsplash.com/photo-1539815208687-a0f05e15d601?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80"/></a>'
+          },
+          {
               text: 'Uppercase',
               icon: '<a href="#theUpper" class="external"><img class="contents-list-imgs" src="https://images.unsplash.com/photo-1513957723230-c330c6152342?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"/></a>'
           },
@@ -45,12 +52,13 @@ var ac6 = app.actions.create({
               text: 'Factorialize',
               icon: '<a href="#theFactor" class="external"><img class="contents-list-imgs" src="https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"/></a>'
           },
-          {
-              text: 'DNA Pair',
-              icon: '<a href="#theDNA" class="external"><img class="contents-list-imgs" src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"/></a>'
-          },
+
       ],
       [{
+          text: 'DNA Pair',
+          icon: '<a href="#theDNA" class="external"><img class="contents-list-imgs" src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"/></a>'
+      },
+        {
               text: 'Celcius',
               icon: '<a href="#theCelc" class="external"><img class="contents-list-imgs" src="https://images.unsplash.com/photo-1483664852095-d6cc6870702d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"/></a>'
           },
@@ -62,21 +70,19 @@ var ac6 = app.actions.create({
   ]
 });
 
+// Used to toggle the visibility of code associated with each function- very reuseable--
 function toggle_visibility(cl) {
-  var els = document.getElementsByClassName(cl);
-  for (var i = 0; i < els.length; ++i) {
-      var s = els[i].style;
+  let els = document.getElementsByClassName(cl);
+  for (let i = 0; i < els.length; ++i) {
+      let s = els[i].style;
       s.display = s.display === 'block' ? 'none' : 'block';
   };
 }
 
+/*
+        ----------Individual Algorithms -----------
+*/
 
-function toggleCode() {
-  let codeInfo = document.getElementsByClassName('code');
-  console.log(codeInfo);
-  codeInfo.style.display == "block" ? codeInfo.style.display = "none" :
-      codeInfo.style.display = "block";
-}
 
 //Convert Celsius to Fahrenheit
 function convertToF(celsius) {
@@ -270,8 +276,8 @@ function spinalCase(str) {
 
 function translatePigLatin(str) {
   // Create variables to be used
-  var pigLatin = '';
-  var regex = /[aeiou]/gi;
+  let pigLatin = '';
+  let regex = /[aeiou]/gi;
 
   // Check if the first character is a vowel
   if (str[0].match(regex)) {
@@ -283,7 +289,7 @@ function translatePigLatin(str) {
   } else {
 
       // Find how many consonants before the first vowel.
-      var vowelIndice = str.indexOf(str.match(regex)[0]);
+      let vowelIndice = str.indexOf(str.match(regex)[0]);
 
       // Take the string from the first vowel to the last char
       // then add the consonants that were previously omitted and add the ending.
@@ -299,7 +305,7 @@ function whatIsInAName(collection, source) {
   // "What's in a name? that which we call a rose
   // By any other name would smell as sweet.”
   // -- by William Shakespeare, Romeo and Juliet
-  var srcKeys = Object.keys(source);
+  let srcKeys = Object.keys(source);
 
   // filter the collection
   return collection.filter(function(obj) {
@@ -362,7 +368,7 @@ function floor(diameter) {
   let floorArea = Math.PI * (radius * radius);
   return floorArea + " Square Foot";
 }
-
+// Calcs the paint needed for the walls of the previously measured circle room
 function walls(height) {
   let radius = document.getElementById('carpetIn').value / 2;
   let circumference = 2 * Math.PI * radius;
@@ -370,38 +376,15 @@ function walls(height) {
   return wallArea;
 }
 
+// The below functions are used to create an estimate on number of solar panels required to offset electrical usage:
 
-// Solar Panel code
-
-/*
-"use strict";
-
-function addMonths(elem){
-let annualUseKw = 0;
-let dailyUseKw = 0;
-
-let i = 0;
-let x = 0;
-
-var months = document.getElementById(elem).getElementsByTagName('input');
-
-  for(i=0; i<months.length; i++) {
-      x = Number(months[i].value);
-        annualUseKw += x;
-  }
-dailyUseKw = annualUseKw/365;
-return dailyUseKw;
-}
-
-var dailyUseKw = addMonths('mpc');
-jslint browser:true */
-
-
+//Takes monthly average and returns daily average
 function dailyKwh() {
   let monthlyUse = document.getElementById('kwhIn').value;
   return monthlyUse * 12 / 365;
 }
 
+//Takes region of U.S. or 'Zone' and returns a value corresponding with the hours of sun in the given region.
 function sunHours() {
   let hrs;
   let theZone = document.getElementById('zoneIn').selectedIndex;
@@ -432,31 +415,34 @@ function sunHours() {
 
 }
 
+//Returns the information from the panel choice input.
 function calculatePanel() {
-  let userChoice = document.getElementById('panelIn').selectedIndex;
-  let panelOptions = document.getElementById('panelIn').options;
-  let power = panelOptions[userChoice].value;
-  let name = panelOptions[userChoice].text;
-  let x = [power, name]
+  let userChoice = document.getElementById('panelIn').selectedIndex,
+      panelOptions = document.getElementById('panelIn').options,
+      power = panelOptions[userChoice].value,
+      name = panelOptions[userChoice].text,
+      x = [power, name];
   return x;
 }
 
+//Brings it all together and returns the innerHtml for the Estimate.
 function calculateSolar() {
-  let dailyUseKw = dailyKwh();
-  let sunHoursPerDay = sunHours();
+  let dailyUseKw = dailyKwh(),
+      sunHoursPerDay = sunHours(),
 
-  let minKwNeeds = dailyUseKw / sunHoursPerDay;
-  let realKwNeeds = minKwNeeds * 1.25;
+      minKwNeeds = dailyUseKw / sunHoursPerDay,
+      realKwNeeds = minKwNeeds * 1.25,
 
-  let realWattNeeds = realKwNeeds * 1000;
+      realWattNeeds = realKwNeeds * 1000,
 
-  let panelInfo = calculatePanel();
-  let panelOutput = panelInfo[0];
-  let panelName = panelInfo[1];
+      panelInfo = calculatePanel(),
+      panelOutput = panelInfo[0],
+      panelName = panelInfo[1],
 
-  let panelsNeeded = Math.ceil(realWattNeeds / panelOutput);
+      panelsNeeded = Math.ceil(realWattNeeds / panelOutput),
 
-  let feedback = "";
+      feedback = "";
+
   feedback += "<p>Based on your average daily use of " + Math.round(dailyUseKw) + "kwh, you will need " + panelsNeeded + " " + panelName + " solar panels to offset 100% of your average daily electrical consumption.</p>";
   feedback += "<h2>Additional Details</h2>";
   feedback += "<p>Your average daily electicity consuption: " + Math.round(dailyUseKw) + " Kwh per day.</p>"
@@ -464,6 +450,4 @@ function calculateSolar() {
   feedback += "<p>Realistic watts needed per hour: " + Math.round(realWattNeeds) + " watts/hour.</p>"
   feedback += "<p>The " + panelName + " panel you selected generates about " + panelOutput + " watts per hour.</p>"
 
-  document.getElementById('solarRecommendation').innerHTML = feedback;
-
-}
+  document.getElementById('solarRecommendation').innerHTML = feedback;}
