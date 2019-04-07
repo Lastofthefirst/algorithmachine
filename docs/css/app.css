@@ -22,7 +22,7 @@
 }
 
 .navbar {
-    background-color: #787ED4;
+    background-color: #3D48C2;
     color: #ffffff;
 }
 
@@ -69,6 +69,6 @@ input {
 
 button {
     color: white !important;
-    background-color: #787ED4 !important;
+    background-color: #3D48C2 !important;
     margin: 5px !important;
 }
